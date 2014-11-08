@@ -28,8 +28,10 @@
 		84D2B62F1A0E1D4A00F29DC3 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B62D1A0E1D4A00F29DC3 /* CardView.xib */; };
 		84D2B6311A0E1E9E00F29DC3 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6301A0E1E9E00F29DC3 /* TabBarViewController.m */; };
 		84D2B6341A0E1EB000F29DC3 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B6331A0E1EB000F29DC3 /* TabBarViewController.xib */; };
-		84D2B6391A0E1EE600F29DC3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6371A0E1EE600F29DC3 /* TableViewController.m */; };
 		84D2B63A1A0E1EE600F29DC3 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B6381A0E1EE600F29DC3 /* TableViewController.xib */; };
+		D03B88B71A0E40D00099E5AD /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03B88B61A0E40D00099E5AD /* TableViewCell.xib */; };
+		D03B88BA1A0E41410099E5AD /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03B88B91A0E41410099E5AD /* TableViewCell.m */; };
+		D03B88BD1A0E41950099E5AD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03B88BC1A0E41950099E5AD /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +89,11 @@
 		84D2B6321A0E1EAA00F29DC3 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		84D2B6331A0E1EB000F29DC3 /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		84D2B6361A0E1EE600F29DC3 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		84D2B6371A0E1EE600F29DC3 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		84D2B6381A0E1EE600F29DC3 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		D03B88B61A0E40D00099E5AD /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCell.xib; path = ../../.Trash/Trendsetter/Trendsetter/TableViewCell.xib; sourceTree = "<group>"; };
+		D03B88B81A0E41270099E5AD /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewCell.h; path = ../../.Trash/Trendsetter/Trendsetter/TableViewCell.h; sourceTree = "<group>"; };
+		D03B88B91A0E41410099E5AD /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewCell.m; path = ../../.Trash/Trendsetter/Trendsetter/TableViewCell.m; sourceTree = "<group>"; };
+		D03B88BC1A0E41950099E5AD /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../../.Trash/Trendsetter/Trendsetter/TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +150,9 @@
 				84D2B5FE1A0E142B00F29DC3 /* LoginViewController.xib */,
 				84D2B62B1A0E1D4A00F29DC3 /* CardView.h */,
 				84D2B62C1A0E1D4A00F29DC3 /* CardView.m */,
+				D03B88B81A0E41270099E5AD /* TableViewCell.h */,
+				D03B88B91A0E41410099E5AD /* TableViewCell.m */,
+				D03B88B61A0E40D00099E5AD /* TableViewCell.xib */,
 				84D2B62D1A0E1D4A00F29DC3 /* CardView.xib */,
 			);
 			path = Trendsetter;
@@ -267,7 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				84D2B6361A0E1EE600F29DC3 /* TableViewController.h */,
-				84D2B6371A0E1EE600F29DC3 /* TableViewController.m */,
+				D03B88BC1A0E41950099E5AD /* TableViewController.m */,
 				84D2B6381A0E1EE600F29DC3 /* TableViewController.xib */,
 			);
 			name = TableView;
@@ -355,6 +363,7 @@
 			files = (
 				84D2B6341A0E1EB000F29DC3 /* TabBarViewController.xib in Resources */,
 				84D2B5E71A0E13F800F29DC3 /* LaunchScreen.xib in Resources */,
+				D03B88B71A0E40D00099E5AD /* TableViewCell.xib in Resources */,
 				84D2B5E41A0E13F800F29DC3 /* Images.xcassets in Resources */,
 				84D2B63A1A0E1EE600F29DC3 /* TableViewController.xib in Resources */,
 				84D2B62F1A0E1D4A00F29DC3 /* CardView.xib in Resources */,
@@ -383,11 +392,12 @@
 				84D2B5DC1A0E13F800F29DC3 /* AppDelegate.m in Sources */,
 				84D2B6251A0E1D1D00F29DC3 /* MDCSwipeOptions.m in Sources */,
 				84D2B62E1A0E1D4A00F29DC3 /* CardView.m in Sources */,
-				84D2B6391A0E1EE600F29DC3 /* TableViewController.m in Sources */,
 				84D2B6231A0E1D1D00F29DC3 /* UIColor+MDCRGB8Bit.m in Sources */,
+				D03B88BA1A0E41410099E5AD /* TableViewCell.m in Sources */,
 				84D2B6281A0E1D1D00F29DC3 /* MDCSwipeResult.m in Sources */,
 				84D2B6291A0E1D1D00F29DC3 /* MDCSwipeToChooseView.m in Sources */,
 				84D2B6311A0E1E9E00F29DC3 /* TabBarViewController.m in Sources */,
+				D03B88BD1A0E41950099E5AD /* TableViewController.m in Sources */,
 				84D2B5D91A0E13F800F29DC3 /* main.m in Sources */,
 				84D2B6271A0E1D1D00F29DC3 /* MDCPanState.m in Sources */,
 				84D2B62A1A0E1D1D00F29DC3 /* UIView+MDCSwipeToChoose.m in Sources */,
@@ -576,6 +586,7 @@
 				84D2B5F81A0E13F800F29DC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84D2B5F91A0E13F800F29DC3 /* Build configuration list for PBXNativeTarget "TrendsetterTests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +595,7 @@
 				84D2B5FB1A0E13F800F29DC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
