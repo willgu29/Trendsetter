@@ -42,10 +42,10 @@
     TabBarViewController *tabBarVC = [[TabBarViewController alloc] init];
     tabBarVC.viewControllers = [NSArray arrayWithObjects:loginVC, tableVC, myVC, nil];
     
-//    IntroViewController *introVC = [[IntroViewController alloc] init];
+    IntroViewController *introVC = [[IntroViewController alloc] init];
     
     
-    self.window.rootViewController = tabBarVC;
+    self.window.rootViewController = introVC;
     self.window.backgroundColor = [UIColor whiteColor];
     
     

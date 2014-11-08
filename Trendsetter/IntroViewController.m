@@ -12,6 +12,8 @@
 #import "TableViewController.h"
 #import "MyIdeasViewController.h"
 
+#import "ImageScrollView.h"
+
 @interface IntroViewController ()
 
 @property (nonatomic, weak) IBOutlet UIPageControl *pageControl;
@@ -147,6 +149,19 @@
     [self animateToPage:0];
     _pageControl.numberOfPages = 4;
 
+    
+    
+    ImageScrollView *imageScroll = [[ImageScrollView alloc] initWithFrame:CGRectMake(40, 20, 162, 338)];
+    
+    UIImage *image1 = [UIImage imageNamed:@"Clipped.png"];
+    UIImage *image2 = [UIImage imageNamed:@"contacts.png"];
+    UIImage *image3 = [UIImage imageNamed:@"Heart40x40.png"];
+    UIImage *image4 = [UIImage imageNamed:@"Info40x40.png"];
+    
+    [imageScroll setScrollViewContents:@[image1, image2, image3, image4]];
+    imageScroll.imageControlPos = ImageControlPositionCenterBottom;
+    
+    [self.view addSubview:imageScroll];
 }
 
 - (void)didReceiveMemoryWarning {
