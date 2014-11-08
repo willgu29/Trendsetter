@@ -16,12 +16,8 @@
     int cardsGoneThrough;
 }
 
-@property (nonatomic, weak) IBOutlet UIButton *randomCard;
-@property (nonatomic, weak) IBOutlet UIButton *toggleDisplay;
 @property (nonatomic, weak) IBOutlet UIView *outOfCards;
-@property (nonatomic, weak) IBOutlet UIStepper *stepper;
-@property (nonatomic, weak) IBOutlet UILabel *randomNumber;
-@property (nonatomic, weak) IBOutlet UILabel *cardsLeft;
+
 
 
 
@@ -40,8 +36,6 @@
     isTable = NO;
     cardsInStack = 0;
     cardsGoneThrough = 0;
-    _randomNumber.text = [NSString stringWithFormat:@"%.f", _stepper.value];
-    _cardsLeft.text = [NSString stringWithFormat:@"Cards left: %d", [_cardSet count]];
     isNotRandom = YES;
 }
 
@@ -174,14 +168,6 @@
     }
     cardsInStack--;
     cardsGoneThrough++;
-    if (isNotRandom)
-    {
-        _cardsLeft.text = [NSString stringWithFormat:@"Cards left: %d",([_cardSet count] - cardsGoneThrough)];
-    }
-    else
-    {
-        _cardsLeft.text = [NSString stringWithFormat:@"Cards left: %d",cardsInStack];
-    }
     
     if (cardsInStack < 3 && isNotRandom)
     {

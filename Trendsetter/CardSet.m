@@ -39,6 +39,8 @@ const int NUMBER_OF_CARDS_IN_DECK = 89;
 -(void)addCardsToArray
 {
 
+    //TODO: REPLACE THIS METHOD WITH DATABASE PULL
+    
     NSMutableArray *temporaryArray = [[NSMutableArray alloc] init];
     
     NSString* path = [[NSBundle mainBundle] pathForResource:@"Card List"
@@ -95,6 +97,9 @@ const int NUMBER_OF_CARDS_IN_DECK = 89;
 
 -(Card *)getNextCard
 {
+    //TODO: PULL CARDS FROM DATABASE, add to _cardSet array.
+    
+    
     _onCardNumber++;
     
     if (NUMBER_OF_CARDS_IN_DECK <= _onCardNumber)
@@ -113,6 +118,9 @@ const int NUMBER_OF_CARDS_IN_DECK = 89;
 
 -(NSArray *)getNextFiveCards
 {
+    
+    //TODO: GET DATABASE PULL
+    
     NSMutableArray *temporaryArray = [[NSMutableArray alloc] init];
     for (int i = 0; i < 5; i++)
     {

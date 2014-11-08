@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CardView">
-            <rect key="frame" x="0.0" y="0.0" width="284" height="222"/>
+            <rect key="frame" x="0.0" y="0.0" width="284" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card #" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F81-rN-i2R">
@@ -30,7 +30,7 @@
                 <outlet property="cardNumber" destination="F81-rN-i2R" id="HgC-9q-dFI"/>
                 <outlet property="cardText" destination="Udv-tF-fIb" id="l1k-4W-nT1"/>
             </connections>
-            <point key="canvasLocation" x="126" y="-91"/>
+            <point key="canvasLocation" x="126" y="-42"/>
         </view>
     </objects>
 </document>
