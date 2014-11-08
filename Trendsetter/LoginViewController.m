@@ -8,22 +8,27 @@
 
 #import "LoginViewController.h"
 #import "CardView.h"
+#import "PostIdeaViewController.h"
 @interface LoginViewController ()
 {
-    BOOL isTable; //DEFAULT NO;
-    BOOL isNotRandom; //DEFAULT YES;
     int cardsInStack;
     int cardsGoneThrough;
 }
 
 @property (nonatomic, weak) IBOutlet UIView *outOfCards;
-
+@property (nonatomic, weak) IBOutlet UIButton *postButton;
 
 
 
 @end
 
 @implementation LoginViewController
+
+-(IBAction)postButton:(UIButton *)sender
+{
+    PostIdeaViewController *postVC = [[PostIdeaViewController alloc] init];
+    [self presentViewController:postVC animated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,10 +38,8 @@
     _tableSet = [[CardSet alloc] init];
     
     [_cardSet shuffleDeck];
-    isTable = NO;
     cardsInStack = 0;
     cardsGoneThrough = 0;
-    isNotRandom = YES;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -94,10 +97,8 @@
     //    [self.view addSubview:cardView];
     
     //TODO: animate
-    if (isNotRandom)
-    {
-        //ANIMATE
-    }
+   
+    //ANIMATE
     
     [self.view insertSubview:cardView aboveSubview:_outOfCards];
 }
@@ -169,7 +170,7 @@
     cardsInStack--;
     cardsGoneThrough++;
     
-    if (cardsInStack < 3 && isNotRandom)
+    if (cardsInStack < 3)
     {
         NSLog(@"Add cards!");
         NSArray *arrayOfCards = [_cardSet getNextFiveCards];
