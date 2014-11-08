@@ -10,6 +10,8 @@
 
 @interface PostIdeaViewController ()
 
+@property (nonatomic, weak) IBOutlet UITextView *textView;
+
 @end
 
 @implementation PostIdeaViewController
@@ -22,6 +24,45 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - IBACTIONS
+
+-(IBAction)backButton:(UIButton *)sender
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(IBAction)postButton:(UIButton *)sender
+{
+    //TODO: Post
+}
+
+-(void)textViewDidBeginEditing:(UITextView *)textView
+{
+    textView.text = @"";
+    textView.textColor = [UIColor blackColor];
+}
+
+-(void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@""])
+    {
+        textView.textColor = [UIColor lightGrayColor];
+        textView.text = @"What is your new idea?";
+    }
+}
+
+-(void)resignKeyboard
+{
+    NSLog(@"Resign keyboard");
+    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
+    
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self resignKeyboard];
 }
 
 /*
