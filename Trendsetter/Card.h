@@ -1,8 +1,8 @@
 //
 //  Card.h
-//  Decidio
+//  Trendsetter
 //
-//  Created by William Gu on 10/18/14.
+//  Created by William Gu on 11/8/14.
 //  Copyright (c) 2014 William Gu. All rights reserved.
 //
 
@@ -14,6 +14,5 @@
 @property (nonatomic) int cardNumber;
 
 -(instancetype)initWithText:(NSString *)text andNumber:(int)number;
-
 
 @end
