@@ -18,11 +18,6 @@
 
 @implementation TableViewController
 
--(IBAction)backButton:(UIButton *)sender
-{
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
