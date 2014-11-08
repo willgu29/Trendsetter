@@ -7,8 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostIdeaViewController">
             <connections>
                 <outlet property="headlineLabel" destination="L9F-IK-Odo" id="SXp-Dy-Xwc"/>
-                <outlet property="randomInspirationalText" destination="KDZ-uH-L5Y" id="Nbg-bf-Lzd"/>
-                <outlet property="textView" destination="3dE-pT-EcV" id="sqo-lU-Udd"/>
+                <outlet property="randomInspirationalText" destination="KDZ-uH-L5Y" id="bg1-lR-3Gy"/>
+                <outlet property="textView" destination="dVW-KL-5kW" id="tds-Sg-D7O"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -64,6 +64,12 @@
                         <action selector="changeHeadline:" destination="-1" eventType="touchUpInside" id="3pd-OM-l6W"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THINK BIG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDZ-uH-L5Y">
+                    <rect key="frame" x="8" y="473" width="304" height="21"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ch7-je-5az">
                     <rect key="frame" x="8" y="530" width="79" height="30"/>
                     <state key="normal" title="Add Details">
@@ -73,21 +79,16 @@
                         <action selector="addDetails:" destination="-1" eventType="touchUpInside" id="BBU-kt-qQP"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What is your idea?" translatesAutoresizingMaskIntoConstraints="NO" id="3dE-pT-EcV">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What is your idea?" translatesAutoresizingMaskIntoConstraints="NO" id="dVW-KL-5kW">
+                    <rect key="frame" x="0.0" y="114" width="320" height="351"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     <connections>
-                        <outlet property="delegate" destination="-1" id="nRF-Qw-TYK"/>
+                        <outlet property="delegate" destination="-1" id="dXL-nw-sof"/>
                     </connections>
                 </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THINK BIG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDZ-uH-L5Y">
-                    <rect key="frame" x="8" y="473" width="304" height="21"/>
-                    <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
