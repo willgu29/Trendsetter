@@ -49,7 +49,7 @@
     
     cell.IdeaNameLabel.text = [tableData objectAtIndex:indexPath.row];
     cell.IdeaSummaryLabel = [tableSumData objectAtIndex:indexPath.row];
-    cell.IdeaImageView.image = [UIImage imageNamed:@"lightbulb.png"];
+    cell.IdeaImageView.image = [UIImage imageNamed:@"lightbulb.jpg"];
     //cell.NumOfXsLabel.text = [prepTime objectAtIndex:indexPath.row];
     //cell.NumOfHeartsLabel.text
     
