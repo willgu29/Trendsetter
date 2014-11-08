@@ -30,6 +30,9 @@
 		84D2B6341A0E1EB000F29DC3 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B6331A0E1EB000F29DC3 /* TabBarViewController.xib */; };
 		84D2B6391A0E1EE600F29DC3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6371A0E1EE600F29DC3 /* TableViewController.m */; };
 		84D2B63A1A0E1EE600F29DC3 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B6381A0E1EE600F29DC3 /* TableViewController.xib */; };
+		D0111CDF1A0E2BA4005AAC90 /* lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = D0111CDE1A0E2BA4005AAC90 /* lightbulb.png */; };
+		D0111CE11A0E2C65005AAC90 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0111CE01A0E2C65005AAC90 /* TableViewCell.xib */; };
+		D0111CE41A0E3178005AAC90 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0111CE31A0E3178005AAC90 /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,10 @@
 		84D2B6361A0E1EE600F29DC3 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		84D2B6371A0E1EE600F29DC3 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		84D2B6381A0E1EE600F29DC3 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		D0111CDE1A0E2BA4005AAC90 /* lightbulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lightbulb.png; path = ../../Downloads/lightbulb.png; sourceTree = "<group>"; };
+		D0111CE01A0E2C65005AAC90 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		D0111CE21A0E3178005AAC90 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		D0111CE31A0E3178005AAC90 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +137,7 @@
 		84D2B5D51A0E13F800F29DC3 /* Trendsetter */ = {
 			isa = PBXGroup;
 			children = (
+				D0111CDE1A0E2BA4005AAC90 /* lightbulb.png */,
 				84D2B6351A0E1ECF00F29DC3 /* TableView */,
 				84D2B6321A0E1EAA00F29DC3 /* TabBarViewController.h */,
 				84D2B6301A0E1E9E00F29DC3 /* TabBarViewController.m */,
@@ -146,6 +154,9 @@
 				84D2B62B1A0E1D4A00F29DC3 /* CardView.h */,
 				84D2B62C1A0E1D4A00F29DC3 /* CardView.m */,
 				84D2B62D1A0E1D4A00F29DC3 /* CardView.xib */,
+				D0111CE01A0E2C65005AAC90 /* TableViewCell.xib */,
+				D0111CE21A0E3178005AAC90 /* TableViewCell.h */,
+				D0111CE31A0E3178005AAC90 /* TableViewCell.m */,
 			);
 			path = Trendsetter;
 			sourceTree = "<group>";
@@ -357,6 +368,8 @@
 				84D2B5E71A0E13F800F29DC3 /* LaunchScreen.xib in Resources */,
 				84D2B5E41A0E13F800F29DC3 /* Images.xcassets in Resources */,
 				84D2B63A1A0E1EE600F29DC3 /* TableViewController.xib in Resources */,
+				D0111CDF1A0E2BA4005AAC90 /* lightbulb.png in Resources */,
+				D0111CE11A0E2C65005AAC90 /* TableViewCell.xib in Resources */,
 				84D2B62F1A0E1D4A00F29DC3 /* CardView.xib in Resources */,
 				84D2B6001A0E142B00F29DC3 /* LoginViewController.xib in Resources */,
 			);
@@ -385,6 +398,7 @@
 				84D2B62E1A0E1D4A00F29DC3 /* CardView.m in Sources */,
 				84D2B6391A0E1EE600F29DC3 /* TableViewController.m in Sources */,
 				84D2B6231A0E1D1D00F29DC3 /* UIColor+MDCRGB8Bit.m in Sources */,
+				D0111CE41A0E3178005AAC90 /* TableViewCell.m in Sources */,
 				84D2B6281A0E1D1D00F29DC3 /* MDCSwipeResult.m in Sources */,
 				84D2B6291A0E1D1D00F29DC3 /* MDCSwipeToChooseView.m in Sources */,
 				84D2B6311A0E1E9E00F29DC3 /* TabBarViewController.m in Sources */,
@@ -576,6 +590,7 @@
 				84D2B5F81A0E13F800F29DC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84D2B5F91A0E13F800F29DC3 /* Build configuration list for PBXNativeTarget "TrendsetterTests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +599,7 @@
 				84D2B5FB1A0E13F800F29DC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

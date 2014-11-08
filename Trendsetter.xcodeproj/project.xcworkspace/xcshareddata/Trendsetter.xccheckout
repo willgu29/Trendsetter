@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D3BE3E06-D183-4DDD-9B3B-3FA521EB6B62</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Trendsetter</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>30774EE78FE170329CBA27A29E72F828CA71E37F</key>
+		<string>https://github.com/willgu29/Trendsetter.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Trendsetter.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>30774EE78FE170329CBA27A29E72F828CA71E37F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/willgu29/Trendsetter.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>30774EE78FE170329CBA27A29E72F828CA71E37F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>30774EE78FE170329CBA27A29E72F828CA71E37F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Trendsetter</string>
+		</dict>
+	</array>
+</dict>
+</plist>

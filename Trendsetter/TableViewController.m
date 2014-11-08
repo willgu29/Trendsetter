@@ -9,6 +9,9 @@
 #import "TableViewController.h"
 
 @interface TableViewController ()
+{
+    NSArray *tableData;
+}
 
 @end
 
@@ -16,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    tableData = [NSArray arrayWithObjects:@"Idea 1: by KANYEWEST" , @"Idea 2: by JAYZ", @"Idea 3 by OBAMA", @"Idea 4: CREATED BY LIFE", nil];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -24,6 +29,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [tableData count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *TableViewIdentifier = @"TableViewItem";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableViewIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:TableViewIdentifier];
+    }
+    
+    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:@"lightbulb.png"];
+    return cell;
+}
 /*
 #pragma mark - Navigation
 
