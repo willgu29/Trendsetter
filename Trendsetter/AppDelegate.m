@@ -10,6 +10,8 @@
 #import "LoginViewController.h"
 #import "TabBarViewController.h"
 #import "TableViewController.h"
+#import "MyIdeasViewController.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,12 +26,14 @@
 
     LoginViewController *loginVC = [[LoginViewController alloc] init];
     TableViewController *tableVC = [[TableViewController alloc] init];
+    MyIdeasViewController *myVC = [[MyIdeasViewController alloc] init];
     
     loginVC.title = @"Swipe";
     tableVC.title = @"Trending";
+    myVC.title = @"Ideas";
     
     TabBarViewController *tabBarVC = [[TabBarViewController alloc] init];
-    tabBarVC.viewControllers = [NSArray arrayWithObjects:loginVC, tableVC, nil];
+    tabBarVC.viewControllers = [NSArray arrayWithObjects:loginVC, tableVC, myVC, nil];
     
     self.window.rootViewController = tabBarVC;
     self.window.backgroundColor = [UIColor whiteColor];

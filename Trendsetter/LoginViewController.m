@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "CardView.h"
 #import "PostIdeaViewController.h"
+#import "SettingsViewController.h"
 @interface LoginViewController ()
 {
     int cardsInStack;
@@ -28,6 +29,11 @@
 {
     PostIdeaViewController *postVC = [[PostIdeaViewController alloc] init];
     [self presentViewController:postVC animated:YES completion:nil];
+}
+
+-(IBAction)settingsButton:(UIButton *)sender
+{
+    
 }
 
 - (void)viewDidLoad {
@@ -91,7 +97,7 @@
             NSLog(@"Let go now to delete the photo!");
         }
     };
-    [cardView setFrame:CGRectMake(18, 70, cardView.frame.size.width, cardView.frame.size.height)];
+    [cardView setFrame:CGRectMake(18, 90, cardView.frame.size.width, cardView.frame.size.height)];
     [cardView mdc_swipeToChooseSetup:options];
     
     //    [self.view addSubview:cardView];

@@ -1,5 +1,5 @@
 //
-//  IntroViewController.h
+//  SettingsViewController.h
 //  Trendsetter
 //
 //  Created by William Gu on 11/8/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IntroViewController : UIViewController
+@interface SettingsViewController : UIViewController
 
 @end
