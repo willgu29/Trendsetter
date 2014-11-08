@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IntroViewController">
             <connections>
-                <outlet property="currentPage" destination="Sd0-tp-wIn" id="gvk-9T-vDH"/>
+                <outlet property="currentPage" destination="COZ-Yb-QHV" id="Ujx-op-a72"/>
                 <outlet property="loginButton" destination="Mo3-fe-InH" id="IAM-SE-HcN"/>
                 <outlet property="pageControl" destination="PCU-ox-pHH" id="YZY-PA-3uW"/>
                 <outlet property="text" destination="uCO-M5-FwK" id="J2m-6O-dcD"/>
@@ -36,7 +36,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sd0-tp-wIn">
-                    <rect key="frame" x="80" y="92" width="160" height="284"/>
+                    <rect key="frame" x="80" y="47" width="160" height="336"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="ewu-uL-35K">
+                            <rect key="frame" x="-2" y="-1" width="162" height="337"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="COZ-Yb-QHV">
+                            <rect key="frame" x="13" y="49" width="132" height="237"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
@@ -65,4 +74,7 @@
             </connections>
         </swipeGestureRecognizer>
     </objects>
+    <resources>
+        <image name="iPhone" width="162" height="337"/>
+    </resources>
 </document>
