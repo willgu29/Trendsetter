@@ -24,6 +24,13 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
+    
+    
+    //TODO:
+    //if Device ID is present in database, just login.
+    //Otherwise, got to intro page, login w/ new username.
+    
+    
     LoginViewController *loginVC = [[LoginViewController alloc] init];
     TableViewController *tableVC = [[TableViewController alloc] init];
     MyIdeasViewController *myVC = [[MyIdeasViewController alloc] init];

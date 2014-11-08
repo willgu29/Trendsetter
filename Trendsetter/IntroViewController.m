@@ -7,6 +7,10 @@
 //
 
 #import "IntroViewController.h"
+#import "TabBarViewController.h"
+#import "LoginViewController.h"
+#import "TableViewController.h"
+#import "MyIdeasViewController.h"
 
 @interface IntroViewController ()
 
@@ -19,6 +23,36 @@
 @end
 
 @implementation IntroViewController
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    //TODO: Save to database
+}
+
+-(IBAction)login:(UIButton *)sender
+{
+    
+    LoginViewController *loginVC = [[LoginViewController alloc] init];
+    TableViewController *tableVC = [[TableViewController alloc] init];
+    MyIdeasViewController *myVC = [[MyIdeasViewController alloc] init];
+    
+    loginVC.title = @"Swipe";
+    tableVC.title = @"Trending";
+    myVC.title = @"Ideas";
+    
+    TabBarViewController *tabBarVC = [[TabBarViewController alloc] init];
+    tabBarVC.viewControllers = [NSArray arrayWithObjects:loginVC, tableVC, myVC, nil];
+    
+    
+    
+    
+    [self presentViewController:tabBarVC animated:YES completion:nil];
+}
 
 -(IBAction)tap:(id)sender
 {
@@ -78,12 +112,12 @@
     }
     else if (pageNumber == 1)
     {
-        image = [UIImage imageNamed:@"Heart40x40.png"];
+        image = [UIImage imageNamed:@"contacts.png"];
         self.text.text = @"Hold then drag";
     }
     else if (pageNumber == 2)
     {
-        image = [UIImage imageNamed:@"Heart40x40.png"];
+        image = [UIImage imageNamed:@"world clock.png"];
         self.text.text = @"Hold to pause";
     }
     else if (pageNumber == 3)
