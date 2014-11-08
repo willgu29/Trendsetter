@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
+                <outlet property="authorOf" destination="Bme-2r-Ntd" id="8Sz-Gj-ypI"/>
+                <outlet property="hashTags" destination="aDb-ci-zbV" id="uCL-s5-hN6"/>
                 <outlet property="outOfCards" destination="TNh-Kr-tLI" id="5NO-hi-26t"/>
                 <outlet property="postButton" destination="9C5-dy-bCz" id="Hpn-af-hc6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -44,17 +46,37 @@
                         <action selector="settingsButton:" destination="-1" eventType="touchUpInside" id="g25-ZW-gl6"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNh-Kr-tLI">
-                    <rect key="frame" x="18" y="132" width="284" height="320"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNh-Kr-tLI" customClass="CardView">
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bme-2r-Ntd">
+                    <rect key="frame" x="88" y="439" width="161" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Info40x40" translatesAutoresizingMaskIntoConstraints="NO" id="w8F-SQ-Lhv">
+                    <rect key="frame" x="45" y="478" width="20" height="20"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hashtags categories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-ci-zbV">
+                    <rect key="frame" x="88" y="478" width="158" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Person40x40" translatesAutoresizingMaskIntoConstraints="NO" id="KMA-dK-CLo">
+                    <rect key="frame" x="45" y="439" width="20" height="20"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
+        <image name="Info40x40" width="20" height="20"/>
         <image name="Overlay 80" width="320" height="81"/>
+        <image name="Person40x40" width="20" height="20"/>
         <image name="more 2" width="6" height="30"/>
     </resources>
 </document>

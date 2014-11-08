@@ -18,12 +18,16 @@
 
 @property (nonatomic, weak) IBOutlet UIView *outOfCards;
 @property (nonatomic, weak) IBOutlet UIButton *postButton;
-
+@property (nonatomic, weak) IBOutlet UILabel *authorOf;
+@property (nonatomic, weak) IBOutlet UILabel *hashTags;
 
 
 @end
 
 @implementation LoginViewController
+
+
+
 
 -(IBAction)postButton:(UIButton *)sender
 {
@@ -92,10 +96,10 @@
     options.delegate = self;
     options.onPan = ^(MDCPanState *state){
         if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionLeft) {
-            NSLog(@"Let go now to delete the photo!");
+//            NSLog(@"Let go now to delete the photo!");
         }
         if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionRight) {
-            NSLog(@"Let go now to delete the photo!");
+//            NSLog(@"Let go now to delete the photo!");
         }
     };
     [cardView setFrame:CGRectMake(18, 90, cardView.frame.size.width, cardView.frame.size.height)];
@@ -143,7 +147,7 @@
 
 -(void)viewDidCancelSwipe:(UIView *)view
 {
-    
+    NSLog(@"SUP");
 }
 
 -(BOOL)view:(UIView *)view shouldBeChosenWithDirection:(MDCSwipeDirection)direction
@@ -170,9 +174,17 @@
 -(void)view:(UIView *)view wasChosenWithDirection:(MDCSwipeDirection)direction
 {
     if (direction == MDCSwipeDirectionLeft) {
-        //        NSLog(@"Photo deleted!");
-    } else {
-        //        NSLog(@"Photo saved!");
+                NSLog(@"Left!");
+    } else if (direction == MDCSwipeDirectionRight) {
+                NSLog(@"Right!");
+    }
+    else if (direction == MDCSwipeDirectionNone)
+    {
+        NSLog(@"Direction none!");
+    }
+    else
+    {
+        NSLog(@"What.");
     }
     cardsInStack--;
     cardsGoneThrough++;
@@ -188,7 +200,26 @@
     
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if ([[self.view.window hitTest:[touch locationInView:self.view.window] withEvent:event] isKindOfClass:[CardView class]])
+    {
+        
+    }
 
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if ([[self.view.window hitTest:[touch locationInView:self.view.window] withEvent:event] isKindOfClass:[CardView class]])
+    {
+        
+    }
+}
 
 /*
 #pragma mark - Navigation
