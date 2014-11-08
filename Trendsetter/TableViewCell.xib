@@ -41,6 +41,13 @@
                     </imageView>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="IdeaImageView" destination="vJU-ny-g7a" id="3nE-cZ-ecW"/>
+                <outlet property="IdeaNameLabel" destination="jIB-n2-dtU" id="fWy-2s-80q"/>
+                <outlet property="IdeaSummaryLabel" destination="qZh-Ye-lVS" id="Dn5-zn-hUc"/>
+                <outlet property="NumOfHeartsLabel" destination="U3u-KZ-JUj" id="s5a-f9-zQp"/>
+                <outlet property="NumOfXsLabel" destination="D9s-IR-SG2" id="QoS-40-AiX"/>
+            </connections>
             <point key="canvasLocation" x="308" y="244"/>
         </tableViewCell>
     </objects>

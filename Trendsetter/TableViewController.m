@@ -21,6 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    [self.tableView setContentInset:UIEdgeInsetsMake(60,0,0,0)];
+
+    
     tableData = [NSArray arrayWithObjects:@"Idea 1: by KANYEWEST" , @"Idea 2: by JAYZ", @"Idea 3 by OBAMA", @"Idea 4: CREATED BY LIFE", nil];
     tableSumData = [NSArray arrayWithObjects:@"Idea1SUMMARY", @"IDEA2Summary", @"IDEA3SUMMARY", @"IDEA4SUMMARY", nil];
     // Do any additional setup after loading the view from its nib.
@@ -48,12 +52,17 @@
     }
     
     cell.IdeaNameLabel.text = [tableData objectAtIndex:indexPath.row];
-    cell.IdeaSummaryLabel = [tableSumData objectAtIndex:indexPath.row];
+    cell.IdeaSummaryLabel.text = [tableSumData objectAtIndex:indexPath.row];
     cell.IdeaImageView.image = [UIImage imageNamed:@"lightbulb.jpg"];
     //cell.NumOfXsLabel.text = [prepTime objectAtIndex:indexPath.row];
     //cell.NumOfHeartsLabel.text
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 120;
 }
 /*
 #pragma mark - Navigation
