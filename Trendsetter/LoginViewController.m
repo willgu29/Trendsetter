@@ -10,6 +10,7 @@
 #import "CardView.h"
 #import "PostIdeaViewController.h"
 #import "SettingsViewController.h"
+#import "DisplayIdeaViewController.h"
 @interface LoginViewController ()
 {
     int cardsInStack;
@@ -217,7 +218,9 @@
     
     if ([[self.view.window hitTest:[touch locationInView:self.view.window] withEvent:event] isKindOfClass:[CardView class]])
     {
-        
+        NSLog(@"touch ended in CardView!");
+        DisplayIdeaViewController *ideaVC = [[DisplayIdeaViewController alloc] init];
+        [self presentViewController:ideaVC animated:YES completion:nil];
     }
 }
 
