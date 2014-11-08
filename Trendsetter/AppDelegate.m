@@ -11,7 +11,7 @@
 #import "TabBarViewController.h"
 #import "TableViewController.h"
 #import "MyIdeasViewController.h"
-#import "LoginViewController.h"
+#import "IntroViewController.h"
 
 @interface AppDelegate ()
 
@@ -34,6 +34,9 @@
     
     TabBarViewController *tabBarVC = [[TabBarViewController alloc] init];
     tabBarVC.viewControllers = [NSArray arrayWithObjects:loginVC, tableVC, myVC, nil];
+    
+//    IntroViewController *introVC = [[IntroViewController alloc] init];
+    
     
     self.window.rootViewController = tabBarVC;
     self.window.backgroundColor = [UIColor whiteColor];
