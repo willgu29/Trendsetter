@@ -14,6 +14,22 @@
 		84D2B5F31A0E13F800F29DC3 /* TrendsetterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B5F21A0E13F800F29DC3 /* TrendsetterTests.m */; };
 		84D2B5FF1A0E142B00F29DC3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B5FD1A0E142B00F29DC3 /* LoginViewController.m */; };
 		84D2B6001A0E142B00F29DC3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B5FE1A0E142B00F29DC3 /* LoginViewController.xib */; };
+		84D2B6211A0E1D1D00F29DC3 /* MDCGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6041A0E1D1D00F29DC3 /* MDCGeometry.m */; };
+		84D2B6221A0E1D1D00F29DC3 /* MDCViewState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6071A0E1D1D00F29DC3 /* MDCViewState.m */; };
+		84D2B6231A0E1D1D00F29DC3 /* UIColor+MDCRGB8Bit.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6091A0E1D1D00F29DC3 /* UIColor+MDCRGB8Bit.m */; };
+		84D2B6241A0E1D1D00F29DC3 /* UIView+MDCBorderedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B60C1A0E1D1D00F29DC3 /* UIView+MDCBorderedLabel.m */; };
+		84D2B6251A0E1D1D00F29DC3 /* MDCSwipeOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6121A0E1D1D00F29DC3 /* MDCSwipeOptions.m */; };
+		84D2B6261A0E1D1D00F29DC3 /* MDCSwipeToChooseViewOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6141A0E1D1D00F29DC3 /* MDCSwipeToChooseViewOptions.m */; };
+		84D2B6271A0E1D1D00F29DC3 /* MDCPanState.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6171A0E1D1D00F29DC3 /* MDCPanState.m */; };
+		84D2B6281A0E1D1D00F29DC3 /* MDCSwipeResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B61A1A0E1D1D00F29DC3 /* MDCSwipeResult.m */; };
+		84D2B6291A0E1D1D00F29DC3 /* MDCSwipeToChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B61E1A0E1D1D00F29DC3 /* MDCSwipeToChooseView.m */; };
+		84D2B62A1A0E1D1D00F29DC3 /* UIView+MDCSwipeToChoose.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6201A0E1D1D00F29DC3 /* UIView+MDCSwipeToChoose.m */; };
+		84D2B62E1A0E1D4A00F29DC3 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B62C1A0E1D4A00F29DC3 /* CardView.m */; };
+		84D2B62F1A0E1D4A00F29DC3 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B62D1A0E1D4A00F29DC3 /* CardView.xib */; };
+		84D2B6311A0E1E9E00F29DC3 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6301A0E1E9E00F29DC3 /* TabBarViewController.m */; };
+		84D2B6341A0E1EB000F29DC3 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B6331A0E1EB000F29DC3 /* TabBarViewController.xib */; };
+		84D2B6391A0E1EE600F29DC3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6371A0E1EE600F29DC3 /* TableViewController.m */; };
+		84D2B63A1A0E1EE600F29DC3 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B6381A0E1EE600F29DC3 /* TableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +56,39 @@
 		84D2B5FC1A0E142B00F29DC3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		84D2B5FD1A0E142B00F29DC3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		84D2B5FE1A0E142B00F29DC3 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		84D2B6031A0E1D1D00F29DC3 /* MDCGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCGeometry.h; sourceTree = "<group>"; };
+		84D2B6041A0E1D1D00F29DC3 /* MDCGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCGeometry.m; sourceTree = "<group>"; };
+		84D2B6061A0E1D1D00F29DC3 /* MDCViewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCViewState.h; sourceTree = "<group>"; };
+		84D2B6071A0E1D1D00F29DC3 /* MDCViewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCViewState.m; sourceTree = "<group>"; };
+		84D2B6081A0E1D1D00F29DC3 /* UIColor+MDCRGB8Bit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MDCRGB8Bit.h"; sourceTree = "<group>"; };
+		84D2B6091A0E1D1D00F29DC3 /* UIColor+MDCRGB8Bit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MDCRGB8Bit.m"; sourceTree = "<group>"; };
+		84D2B60B1A0E1D1D00F29DC3 /* UIView+MDCBorderedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MDCBorderedLabel.h"; sourceTree = "<group>"; };
+		84D2B60C1A0E1D1D00F29DC3 /* UIView+MDCBorderedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MDCBorderedLabel.m"; sourceTree = "<group>"; };
+		84D2B60D1A0E1D1D00F29DC3 /* MDCSwipeToChoose-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MDCSwipeToChoose-Prefix.pch"; sourceTree = "<group>"; };
+		84D2B60F1A0E1D1D00F29DC3 /* MDCSwipeToChoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCSwipeToChoose.h; sourceTree = "<group>"; };
+		84D2B6111A0E1D1D00F29DC3 /* MDCSwipeOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCSwipeOptions.h; sourceTree = "<group>"; };
+		84D2B6121A0E1D1D00F29DC3 /* MDCSwipeOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCSwipeOptions.m; sourceTree = "<group>"; };
+		84D2B6131A0E1D1D00F29DC3 /* MDCSwipeToChooseViewOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCSwipeToChooseViewOptions.h; sourceTree = "<group>"; };
+		84D2B6141A0E1D1D00F29DC3 /* MDCSwipeToChooseViewOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCSwipeToChooseViewOptions.m; sourceTree = "<group>"; };
+		84D2B6161A0E1D1D00F29DC3 /* MDCPanState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCPanState.h; sourceTree = "<group>"; };
+		84D2B6171A0E1D1D00F29DC3 /* MDCPanState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCPanState.m; sourceTree = "<group>"; };
+		84D2B6181A0E1D1D00F29DC3 /* MDCSwipeDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCSwipeDirection.h; sourceTree = "<group>"; };
+		84D2B6191A0E1D1D00F29DC3 /* MDCSwipeResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCSwipeResult.h; sourceTree = "<group>"; };
+		84D2B61A1A0E1D1D00F29DC3 /* MDCSwipeResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCSwipeResult.m; sourceTree = "<group>"; };
+		84D2B61C1A0E1D1D00F29DC3 /* MDCSwipeToChooseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCSwipeToChooseDelegate.h; sourceTree = "<group>"; };
+		84D2B61D1A0E1D1D00F29DC3 /* MDCSwipeToChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCSwipeToChooseView.h; sourceTree = "<group>"; };
+		84D2B61E1A0E1D1D00F29DC3 /* MDCSwipeToChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCSwipeToChooseView.m; sourceTree = "<group>"; };
+		84D2B61F1A0E1D1D00F29DC3 /* UIView+MDCSwipeToChoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MDCSwipeToChoose.h"; sourceTree = "<group>"; };
+		84D2B6201A0E1D1D00F29DC3 /* UIView+MDCSwipeToChoose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MDCSwipeToChoose.m"; sourceTree = "<group>"; };
+		84D2B62B1A0E1D4A00F29DC3 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		84D2B62C1A0E1D4A00F29DC3 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		84D2B62D1A0E1D4A00F29DC3 /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		84D2B6301A0E1E9E00F29DC3 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		84D2B6321A0E1EAA00F29DC3 /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		84D2B6331A0E1EB000F29DC3 /* TabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		84D2B6361A0E1EE600F29DC3 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		84D2B6371A0E1EE600F29DC3 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		84D2B6381A0E1EE600F29DC3 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +130,11 @@
 		84D2B5D51A0E13F800F29DC3 /* Trendsetter */ = {
 			isa = PBXGroup;
 			children = (
+				84D2B6351A0E1ECF00F29DC3 /* TableView */,
+				84D2B6321A0E1EAA00F29DC3 /* TabBarViewController.h */,
+				84D2B6301A0E1E9E00F29DC3 /* TabBarViewController.m */,
+				84D2B6331A0E1EB000F29DC3 /* TabBarViewController.xib */,
+				84D2B6011A0E1D1D00F29DC3 /* MDCSwipeToChoose */,
 				84D2B5DA1A0E13F800F29DC3 /* AppDelegate.h */,
 				84D2B5DB1A0E13F800F29DC3 /* AppDelegate.m */,
 				84D2B5E31A0E13F800F29DC3 /* Images.xcassets */,
@@ -89,6 +143,9 @@
 				84D2B5FC1A0E142B00F29DC3 /* LoginViewController.h */,
 				84D2B5FD1A0E142B00F29DC3 /* LoginViewController.m */,
 				84D2B5FE1A0E142B00F29DC3 /* LoginViewController.xib */,
+				84D2B62B1A0E1D4A00F29DC3 /* CardView.h */,
+				84D2B62C1A0E1D4A00F29DC3 /* CardView.m */,
+				84D2B62D1A0E1D4A00F29DC3 /* CardView.xib */,
 			);
 			path = Trendsetter;
 			sourceTree = "<group>";
@@ -117,6 +174,103 @@
 				84D2B5F11A0E13F800F29DC3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84D2B6011A0E1D1D00F29DC3 /* MDCSwipeToChoose */ = {
+			isa = PBXGroup;
+			children = (
+				84D2B6021A0E1D1D00F29DC3 /* Internal */,
+				84D2B60D1A0E1D1D00F29DC3 /* MDCSwipeToChoose-Prefix.pch */,
+				84D2B60E1A0E1D1D00F29DC3 /* Public */,
+			);
+			path = MDCSwipeToChoose;
+			sourceTree = "<group>";
+		};
+		84D2B6021A0E1D1D00F29DC3 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				84D2B6031A0E1D1D00F29DC3 /* MDCGeometry.h */,
+				84D2B6041A0E1D1D00F29DC3 /* MDCGeometry.m */,
+				84D2B6051A0E1D1D00F29DC3 /* State */,
+				84D2B6081A0E1D1D00F29DC3 /* UIColor+MDCRGB8Bit.h */,
+				84D2B6091A0E1D1D00F29DC3 /* UIColor+MDCRGB8Bit.m */,
+				84D2B60A1A0E1D1D00F29DC3 /* Views */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		84D2B6051A0E1D1D00F29DC3 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				84D2B6061A0E1D1D00F29DC3 /* MDCViewState.h */,
+				84D2B6071A0E1D1D00F29DC3 /* MDCViewState.m */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		84D2B60A1A0E1D1D00F29DC3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84D2B60B1A0E1D1D00F29DC3 /* UIView+MDCBorderedLabel.h */,
+				84D2B60C1A0E1D1D00F29DC3 /* UIView+MDCBorderedLabel.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84D2B60E1A0E1D1D00F29DC3 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				84D2B60F1A0E1D1D00F29DC3 /* MDCSwipeToChoose.h */,
+				84D2B6101A0E1D1D00F29DC3 /* Options */,
+				84D2B6151A0E1D1D00F29DC3 /* State */,
+				84D2B61B1A0E1D1D00F29DC3 /* Views */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		84D2B6101A0E1D1D00F29DC3 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				84D2B6111A0E1D1D00F29DC3 /* MDCSwipeOptions.h */,
+				84D2B6121A0E1D1D00F29DC3 /* MDCSwipeOptions.m */,
+				84D2B6131A0E1D1D00F29DC3 /* MDCSwipeToChooseViewOptions.h */,
+				84D2B6141A0E1D1D00F29DC3 /* MDCSwipeToChooseViewOptions.m */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		84D2B6151A0E1D1D00F29DC3 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				84D2B6161A0E1D1D00F29DC3 /* MDCPanState.h */,
+				84D2B6171A0E1D1D00F29DC3 /* MDCPanState.m */,
+				84D2B6181A0E1D1D00F29DC3 /* MDCSwipeDirection.h */,
+				84D2B6191A0E1D1D00F29DC3 /* MDCSwipeResult.h */,
+				84D2B61A1A0E1D1D00F29DC3 /* MDCSwipeResult.m */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		84D2B61B1A0E1D1D00F29DC3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84D2B61C1A0E1D1D00F29DC3 /* MDCSwipeToChooseDelegate.h */,
+				84D2B61D1A0E1D1D00F29DC3 /* MDCSwipeToChooseView.h */,
+				84D2B61E1A0E1D1D00F29DC3 /* MDCSwipeToChooseView.m */,
+				84D2B61F1A0E1D1D00F29DC3 /* UIView+MDCSwipeToChoose.h */,
+				84D2B6201A0E1D1D00F29DC3 /* UIView+MDCSwipeToChoose.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84D2B6351A0E1ECF00F29DC3 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				84D2B6361A0E1EE600F29DC3 /* TableViewController.h */,
+				84D2B6371A0E1EE600F29DC3 /* TableViewController.m */,
+				84D2B6381A0E1EE600F29DC3 /* TableViewController.xib */,
+			);
+			name = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +353,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D2B6341A0E1EB000F29DC3 /* TabBarViewController.xib in Resources */,
 				84D2B5E71A0E13F800F29DC3 /* LaunchScreen.xib in Resources */,
 				84D2B5E41A0E13F800F29DC3 /* Images.xcassets in Resources */,
+				84D2B63A1A0E1EE600F29DC3 /* TableViewController.xib in Resources */,
+				84D2B62F1A0E1D4A00F29DC3 /* CardView.xib in Resources */,
 				84D2B6001A0E142B00F29DC3 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +376,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D2B6261A0E1D1D00F29DC3 /* MDCSwipeToChooseViewOptions.m in Sources */,
+				84D2B6211A0E1D1D00F29DC3 /* MDCGeometry.m in Sources */,
+				84D2B6221A0E1D1D00F29DC3 /* MDCViewState.m in Sources */,
+				84D2B6241A0E1D1D00F29DC3 /* UIView+MDCBorderedLabel.m in Sources */,
 				84D2B5DC1A0E13F800F29DC3 /* AppDelegate.m in Sources */,
+				84D2B6251A0E1D1D00F29DC3 /* MDCSwipeOptions.m in Sources */,
+				84D2B62E1A0E1D4A00F29DC3 /* CardView.m in Sources */,
+				84D2B6391A0E1EE600F29DC3 /* TableViewController.m in Sources */,
+				84D2B6231A0E1D1D00F29DC3 /* UIColor+MDCRGB8Bit.m in Sources */,
+				84D2B6281A0E1D1D00F29DC3 /* MDCSwipeResult.m in Sources */,
+				84D2B6291A0E1D1D00F29DC3 /* MDCSwipeToChooseView.m in Sources */,
+				84D2B6311A0E1E9E00F29DC3 /* TabBarViewController.m in Sources */,
 				84D2B5D91A0E13F800F29DC3 /* main.m in Sources */,
+				84D2B6271A0E1D1D00F29DC3 /* MDCPanState.m in Sources */,
+				84D2B62A1A0E1D1D00F29DC3 /* UIView+MDCSwipeToChoose.m in Sources */,
 				84D2B5FF1A0E142B00F29DC3 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

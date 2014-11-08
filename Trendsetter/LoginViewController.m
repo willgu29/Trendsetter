@@ -24,6 +24,35 @@
     // Dispose of any resources that can be recreated.
 }
 
+//-(void)view:(UIView *)view wasChosenWithDirection:(MDCSwipeDirection)direction
+//{
+//    if (direction == MDCSwipeDirectionLeft) {
+//        //        NSLog(@"Photo deleted!");
+//    } else {
+//        //        NSLog(@"Photo saved!");
+//    }
+//    cardsInStack--;
+//    cardsGoneThrough++;
+//    if (isNotRandom)
+//    {
+//        _cardsLeft.text = [NSString stringWithFormat:@"Cards left: %d",([_cardSet count] - cardsGoneThrough)];
+//    }
+//    else
+//    {
+//        _cardsLeft.text = [NSString stringWithFormat:@"Cards left: %d",cardsInStack];
+//    }
+//    
+//    if (cardsInStack < 3 && isNotRandom)
+//    {
+//        NSLog(@"Add cards!");
+//        NSArray *arrayOfCards = [_cardSet getNextFiveCards];
+//        [self forArrayAddToView:arrayOfCards];
+//        
+//    }
+//    
+//    
+//}
+
 /*
 #pragma mark - Navigation
 

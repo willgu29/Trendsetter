@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
+#import "TabBarViewController.h"
+#import "TableViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,8 +23,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     LoginViewController *loginVC = [[LoginViewController alloc] init];
+    TableViewController *tableVC = [[TableViewController alloc] init];
     
-    self.window.rootViewController = loginVC;
+    loginVC.title = @"Swipe";
+    tableVC.title = @"Trending";
+    
+    TabBarViewController *tabBarVC = [[TabBarViewController alloc] init];
+    tabBarVC.viewControllers = [NSArray arrayWithObjects:loginVC, tableVC, nil];
+    
+    self.window.rootViewController = tabBarVC;
     self.window.backgroundColor = [UIColor whiteColor];
     
     
