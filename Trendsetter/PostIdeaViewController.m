@@ -11,14 +11,49 @@
 @interface PostIdeaViewController ()
 
 @property (nonatomic, weak) IBOutlet UITextView *textView;
+@property (nonatomic, weak) IBOutlet UILabel *headlineLabel;
+@property (nonatomic, weak) IBOutlet UILabel *randomInspirationalText;
 
 @end
 
 @implementation PostIdeaViewController
 
+-(IBAction)addDetails:(UIButton *)sender
+{
+    
+}
+
+-(IBAction)changeHeadline:(UIButton *)sender
+{
+    if (sender.tag == 0)
+    {
+        _headlineLabel.text = @"How about we...";
+        sender.tag = 1;
+    }
+    else if (sender.tag == 1)
+    {
+        _headlineLabel.text = @"Can we...";
+        sender.tag = 2;
+    }
+    else if (sender.tag == 2)
+    {
+        _headlineLabel.text = @"What if...";
+        sender.tag = 0;
+    }
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    //TODO:
+    //random textview holder text
+    
 }
 
 - (void)didReceiveMemoryWarning {
