@@ -30,8 +30,22 @@
 		84D2B6341A0E1EB000F29DC3 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B6331A0E1EB000F29DC3 /* TabBarViewController.xib */; };
 		84D2B6391A0E1EE600F29DC3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6371A0E1EE600F29DC3 /* TableViewController.m */; };
 		84D2B63A1A0E1EE600F29DC3 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B6381A0E1EE600F29DC3 /* TableViewController.xib */; };
-		D0111CDF1A0E2BA4005AAC90 /* lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = D0111CDE1A0E2BA4005AAC90 /* lightbulb.png */; };
-		D0111CE11A0E2C65005AAC90 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0111CE01A0E2C65005AAC90 /* TableViewCell.xib */; };
+		84D2B6621A0E531E00F29DC3 /* PostIdeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B65E1A0E531E00F29DC3 /* PostIdeaViewController.m */; };
+		84D2B6631A0E531E00F29DC3 /* PostIdeaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B65F1A0E531E00F29DC3 /* PostIdeaViewController.xib */; };
+		84D2B6641A0E531E00F29DC3 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6611A0E531E00F29DC3 /* Card.m */; };
+		84D2B6671A0E532C00F29DC3 /* CardSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6651A0E532C00F29DC3 /* CardSet.m */; };
+		84D2B66B1A0E539B00F29DC3 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B66A1A0E539B00F29DC3 /* TableViewCell.xib */; };
+		84D2B66F1A0E544900F29DC3 /* lightbulb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B66E1A0E544900F29DC3 /* lightbulb.jpg */; };
+		84D2B6711A0E556E00F29DC3 /* Card List.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B6701A0E556E00F29DC3 /* Card List.txt */; };
+		84D2B6741A0E57BE00F29DC3 /* IdeaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6731A0E57BE00F29DC3 /* IdeaData.m */; };
+		84D2B6791A0E601600F29DC3 /* MyIdeasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6771A0E601600F29DC3 /* MyIdeasViewController.m */; };
+		84D2B67A1A0E601600F29DC3 /* MyIdeasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B6781A0E601600F29DC3 /* MyIdeasViewController.xib */; };
+		84D2B67E1A0E60CE00F29DC3 /* MyIdeasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B67C1A0E60CE00F29DC3 /* MyIdeasTableViewCell.m */; };
+		84D2B67F1A0E60CE00F29DC3 /* MyIdeasTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B67D1A0E60CE00F29DC3 /* MyIdeasTableViewCell.xib */; };
+		84D2B6841A0E626500F29DC3 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6821A0E626500F29DC3 /* IntroViewController.m */; };
+		84D2B6851A0E626500F29DC3 /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B6831A0E626500F29DC3 /* IntroViewController.xib */; };
+		84D2B68A1A0E678600F29DC3 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B6881A0E678600F29DC3 /* SettingsViewController.m */; };
+		84D2B68B1A0E678600F29DC3 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B6891A0E678600F29DC3 /* SettingsViewController.xib */; };
 		D0111CE41A0E3178005AAC90 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0111CE31A0E3178005AAC90 /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -92,8 +106,30 @@
 		84D2B6361A0E1EE600F29DC3 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		84D2B6371A0E1EE600F29DC3 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		84D2B6381A0E1EE600F29DC3 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
-		D0111CDE1A0E2BA4005AAC90 /* lightbulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lightbulb.png; path = ../../Downloads/lightbulb.png; sourceTree = "<group>"; };
-		D0111CE01A0E2C65005AAC90 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		84D2B65D1A0E531E00F29DC3 /* PostIdeaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostIdeaViewController.h; sourceTree = "<group>"; };
+		84D2B65E1A0E531E00F29DC3 /* PostIdeaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostIdeaViewController.m; sourceTree = "<group>"; };
+		84D2B65F1A0E531E00F29DC3 /* PostIdeaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostIdeaViewController.xib; sourceTree = "<group>"; };
+		84D2B6601A0E531E00F29DC3 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		84D2B6611A0E531E00F29DC3 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		84D2B6651A0E532C00F29DC3 /* CardSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSet.m; sourceTree = "<group>"; };
+		84D2B6661A0E532C00F29DC3 /* CardSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSet.h; sourceTree = "<group>"; };
+		84D2B66A1A0E539B00F29DC3 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		84D2B66E1A0E544900F29DC3 /* lightbulb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lightbulb.jpg; sourceTree = "<group>"; };
+		84D2B6701A0E556E00F29DC3 /* Card List.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Card List.txt"; sourceTree = "<group>"; };
+		84D2B6721A0E57BE00F29DC3 /* IdeaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdeaData.h; sourceTree = "<group>"; };
+		84D2B6731A0E57BE00F29DC3 /* IdeaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdeaData.m; sourceTree = "<group>"; };
+		84D2B6761A0E601600F29DC3 /* MyIdeasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIdeasViewController.h; sourceTree = "<group>"; };
+		84D2B6771A0E601600F29DC3 /* MyIdeasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyIdeasViewController.m; sourceTree = "<group>"; };
+		84D2B6781A0E601600F29DC3 /* MyIdeasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyIdeasViewController.xib; sourceTree = "<group>"; };
+		84D2B67B1A0E60CE00F29DC3 /* MyIdeasTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyIdeasTableViewCell.h; sourceTree = "<group>"; };
+		84D2B67C1A0E60CE00F29DC3 /* MyIdeasTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyIdeasTableViewCell.m; sourceTree = "<group>"; };
+		84D2B67D1A0E60CE00F29DC3 /* MyIdeasTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyIdeasTableViewCell.xib; sourceTree = "<group>"; };
+		84D2B6811A0E626500F29DC3 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		84D2B6821A0E626500F29DC3 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
+		84D2B6831A0E626500F29DC3 /* IntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
+		84D2B6871A0E678600F29DC3 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		84D2B6881A0E678600F29DC3 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		84D2B6891A0E678600F29DC3 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		D0111CE21A0E3178005AAC90 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		D0111CE31A0E3178005AAC90 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,8 +173,19 @@
 		84D2B5D51A0E13F800F29DC3 /* Trendsetter */ = {
 			isa = PBXGroup;
 			children = (
-				D0111CDE1A0E2BA4005AAC90 /* lightbulb.png */,
+				84D2B6861A0E677500F29DC3 /* SettingsPage */,
+				84D2B6801A0E624A00F29DC3 /* IntroPage */,
+				84D2B6751A0E5FFB00F29DC3 /* MyIdeas */,
+				84D2B65D1A0E531E00F29DC3 /* PostIdeaViewController.h */,
+				84D2B65E1A0E531E00F29DC3 /* PostIdeaViewController.m */,
+				84D2B65F1A0E531E00F29DC3 /* PostIdeaViewController.xib */,
+				84D2B6701A0E556E00F29DC3 /* Card List.txt */,
+				84D2B6601A0E531E00F29DC3 /* Card.h */,
+				84D2B6611A0E531E00F29DC3 /* Card.m */,
+				84D2B66E1A0E544900F29DC3 /* lightbulb.jpg */,
 				84D2B6351A0E1ECF00F29DC3 /* TableView */,
+				84D2B6661A0E532C00F29DC3 /* CardSet.h */,
+				84D2B6651A0E532C00F29DC3 /* CardSet.m */,
 				84D2B6321A0E1EAA00F29DC3 /* TabBarViewController.h */,
 				84D2B6301A0E1E9E00F29DC3 /* TabBarViewController.m */,
 				84D2B6331A0E1EB000F29DC3 /* TabBarViewController.xib */,
@@ -154,9 +201,9 @@
 				84D2B62B1A0E1D4A00F29DC3 /* CardView.h */,
 				84D2B62C1A0E1D4A00F29DC3 /* CardView.m */,
 				84D2B62D1A0E1D4A00F29DC3 /* CardView.xib */,
-				D0111CE01A0E2C65005AAC90 /* TableViewCell.xib */,
 				D0111CE21A0E3178005AAC90 /* TableViewCell.h */,
 				D0111CE31A0E3178005AAC90 /* TableViewCell.m */,
+				84D2B66A1A0E539B00F29DC3 /* TableViewCell.xib */,
 			);
 			path = Trendsetter;
 			sourceTree = "<group>";
@@ -280,8 +327,43 @@
 				84D2B6361A0E1EE600F29DC3 /* TableViewController.h */,
 				84D2B6371A0E1EE600F29DC3 /* TableViewController.m */,
 				84D2B6381A0E1EE600F29DC3 /* TableViewController.xib */,
+				84D2B6721A0E57BE00F29DC3 /* IdeaData.h */,
+				84D2B6731A0E57BE00F29DC3 /* IdeaData.m */,
 			);
 			name = TableView;
+			sourceTree = "<group>";
+		};
+		84D2B6751A0E5FFB00F29DC3 /* MyIdeas */ = {
+			isa = PBXGroup;
+			children = (
+				84D2B6761A0E601600F29DC3 /* MyIdeasViewController.h */,
+				84D2B6771A0E601600F29DC3 /* MyIdeasViewController.m */,
+				84D2B6781A0E601600F29DC3 /* MyIdeasViewController.xib */,
+				84D2B67B1A0E60CE00F29DC3 /* MyIdeasTableViewCell.h */,
+				84D2B67C1A0E60CE00F29DC3 /* MyIdeasTableViewCell.m */,
+				84D2B67D1A0E60CE00F29DC3 /* MyIdeasTableViewCell.xib */,
+			);
+			name = MyIdeas;
+			sourceTree = "<group>";
+		};
+		84D2B6801A0E624A00F29DC3 /* IntroPage */ = {
+			isa = PBXGroup;
+			children = (
+				84D2B6811A0E626500F29DC3 /* IntroViewController.h */,
+				84D2B6821A0E626500F29DC3 /* IntroViewController.m */,
+				84D2B6831A0E626500F29DC3 /* IntroViewController.xib */,
+			);
+			name = IntroPage;
+			sourceTree = "<group>";
+		};
+		84D2B6861A0E677500F29DC3 /* SettingsPage */ = {
+			isa = PBXGroup;
+			children = (
+				84D2B6871A0E678600F29DC3 /* SettingsViewController.h */,
+				84D2B6881A0E678600F29DC3 /* SettingsViewController.m */,
+				84D2B6891A0E678600F29DC3 /* SettingsViewController.xib */,
+			);
+			name = SettingsPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,13 +446,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D2B67F1A0E60CE00F29DC3 /* MyIdeasTableViewCell.xib in Resources */,
 				84D2B6341A0E1EB000F29DC3 /* TabBarViewController.xib in Resources */,
+				84D2B67A1A0E601600F29DC3 /* MyIdeasViewController.xib in Resources */,
+				84D2B66F1A0E544900F29DC3 /* lightbulb.jpg in Resources */,
 				84D2B5E71A0E13F800F29DC3 /* LaunchScreen.xib in Resources */,
+				84D2B68B1A0E678600F29DC3 /* SettingsViewController.xib in Resources */,
 				84D2B5E41A0E13F800F29DC3 /* Images.xcassets in Resources */,
 				84D2B63A1A0E1EE600F29DC3 /* TableViewController.xib in Resources */,
-				D0111CDF1A0E2BA4005AAC90 /* lightbulb.png in Resources */,
-				D0111CE11A0E2C65005AAC90 /* TableViewCell.xib in Resources */,
+				84D2B6711A0E556E00F29DC3 /* Card List.txt in Resources */,
+				84D2B66B1A0E539B00F29DC3 /* TableViewCell.xib in Resources */,
 				84D2B62F1A0E1D4A00F29DC3 /* CardView.xib in Resources */,
+				84D2B6631A0E531E00F29DC3 /* PostIdeaViewController.xib in Resources */,
+				84D2B6851A0E626500F29DC3 /* IntroViewController.xib in Resources */,
 				84D2B6001A0E142B00F29DC3 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,16 +482,24 @@
 				84D2B6221A0E1D1D00F29DC3 /* MDCViewState.m in Sources */,
 				84D2B6241A0E1D1D00F29DC3 /* UIView+MDCBorderedLabel.m in Sources */,
 				84D2B5DC1A0E13F800F29DC3 /* AppDelegate.m in Sources */,
+				84D2B67E1A0E60CE00F29DC3 /* MyIdeasTableViewCell.m in Sources */,
+				84D2B6791A0E601600F29DC3 /* MyIdeasViewController.m in Sources */,
 				84D2B6251A0E1D1D00F29DC3 /* MDCSwipeOptions.m in Sources */,
 				84D2B62E1A0E1D4A00F29DC3 /* CardView.m in Sources */,
 				84D2B6391A0E1EE600F29DC3 /* TableViewController.m in Sources */,
 				84D2B6231A0E1D1D00F29DC3 /* UIColor+MDCRGB8Bit.m in Sources */,
 				D0111CE41A0E3178005AAC90 /* TableViewCell.m in Sources */,
+				84D2B6741A0E57BE00F29DC3 /* IdeaData.m in Sources */,
 				84D2B6281A0E1D1D00F29DC3 /* MDCSwipeResult.m in Sources */,
 				84D2B6291A0E1D1D00F29DC3 /* MDCSwipeToChooseView.m in Sources */,
 				84D2B6311A0E1E9E00F29DC3 /* TabBarViewController.m in Sources */,
 				84D2B5D91A0E13F800F29DC3 /* main.m in Sources */,
+				84D2B6671A0E532C00F29DC3 /* CardSet.m in Sources */,
 				84D2B6271A0E1D1D00F29DC3 /* MDCPanState.m in Sources */,
+				84D2B6841A0E626500F29DC3 /* IntroViewController.m in Sources */,
+				84D2B6641A0E531E00F29DC3 /* Card.m in Sources */,
+				84D2B6621A0E531E00F29DC3 /* PostIdeaViewController.m in Sources */,
+				84D2B68A1A0E678600F29DC3 /* SettingsViewController.m in Sources */,
 				84D2B62A1A0E1D1D00F29DC3 /* UIView+MDCSwipeToChoose.m in Sources */,
 				84D2B5FF1A0E142B00F29DC3 /* LoginViewController.m in Sources */,
 			);

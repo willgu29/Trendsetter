@@ -33,7 +33,8 @@
 
 -(IBAction)settingsButton:(UIButton *)sender
 {
-    
+    SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
+    [self presentViewController:settingsVC animated:YES completion:nil];
 }
 
 - (void)viewDidLoad {
