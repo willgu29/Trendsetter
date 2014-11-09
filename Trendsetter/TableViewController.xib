@@ -72,22 +72,22 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="xqG-Oh-qlF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="17" id="5Ed-k8-C0F"/>
+                <constraint firstItem="RiP-v1-3mf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3f1-ai-e9t"/>
                 <constraint firstItem="NsL-Vx-hic" firstAttribute="trailing" secondItem="vko-5R-zk3" secondAttribute="trailing" id="6vh-IT-IUq"/>
                 <constraint firstItem="RiP-v1-3mf" firstAttribute="centerX" secondItem="ayS-EQ-Hqt" secondAttribute="centerX" id="9Wp-p0-OYH"/>
                 <constraint firstItem="RiP-v1-3mf" firstAttribute="trailing" secondItem="NsL-Vx-hic" secondAttribute="trailing" id="ALT-zd-agp"/>
                 <constraint firstItem="ayS-EQ-Hqt" firstAttribute="top" secondItem="xqG-Oh-qlF" secondAttribute="bottom" constant="19" id="G8B-nX-xkW"/>
-                <constraint firstItem="RiP-v1-3mf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PkM-cU-BOS"/>
+                <constraint firstItem="RiP-v1-3mf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GUE-zd-RN2"/>
+                <constraint firstItem="xqG-Oh-qlF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="17" id="KHW-Vr-AUS"/>
+                <constraint firstItem="xqG-Oh-qlF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="MJA-QF-wzW"/>
+                <constraint firstItem="NsL-Vx-hic" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="QzB-49-syf"/>
                 <constraint firstItem="ayS-EQ-Hqt" firstAttribute="top" secondItem="xbn-dG-Te6" secondAttribute="bottom" constant="21" id="WXh-RH-Vjl"/>
-                <constraint firstAttribute="bottom" secondItem="vko-5R-zk3" secondAttribute="bottom" constant="42" id="Wpv-kh-KoZ"/>
                 <constraint firstItem="ayS-EQ-Hqt" firstAttribute="top" secondItem="NsL-Vx-hic" secondAttribute="bottom" constant="22" id="aoE-vn-iVt"/>
                 <constraint firstItem="RiP-v1-3mf" firstAttribute="leading" secondItem="vko-5R-zk3" secondAttribute="leading" id="eDf-yv-6Yg"/>
                 <constraint firstItem="ayS-EQ-Hqt" firstAttribute="top" secondItem="RiP-v1-3mf" secondAttribute="bottom" constant="15" id="f9E-Am-YLO"/>
+                <constraint firstAttribute="bottom" secondItem="vko-5R-zk3" secondAttribute="bottom" constant="42" id="jBz-eN-tor"/>
                 <constraint firstItem="vko-5R-zk3" firstAttribute="top" secondItem="ayS-EQ-Hqt" secondAttribute="bottom" constant="8" symbolic="YES" id="jK1-ic-mfa"/>
                 <constraint firstItem="NsL-Vx-hic" firstAttribute="leading" secondItem="xbn-dG-Te6" secondAttribute="trailing" constant="14" id="kSp-sZ-bE3"/>
-                <constraint firstItem="NsL-Vx-hic" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="mBZ-xK-TlT"/>
-                <constraint firstItem="RiP-v1-3mf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="reL-qh-JvD"/>
-                <constraint firstItem="xqG-Oh-qlF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="uEk-Av-Vbb"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="409" y="371"/>
