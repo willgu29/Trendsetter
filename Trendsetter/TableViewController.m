@@ -109,9 +109,9 @@
     }
     id myObject = [_tableData objectAtIndex:indexPath.row];
     cell.IdeaSummaryLabel.text = myObject[@"ideaText"];
-    cell.IdeaImageView.image = [UIImage imageNamed:@"HappyFace.png"];
     if (_segmentControl.selectedSegmentIndex == 0)
     {
+        cell.IdeaImageView.image = [UIImage imageNamed:@"HappyFace.png"];
         cell.NumOfHeartsLabel.text = [NSString stringWithFormat:@"+%@",myObject[@"likes"]];
     }
     else if (_segmentControl.selectedSegmentIndex == 1)
@@ -120,10 +120,12 @@
 //        NSString *dislikes = myObject[@"dislikes"];
 //        int difference = likes.intValue - dislikes.intValue;
 //        cell.NumOfHeartsLabel.text = [NSString stringWithFormat:@"%d",difference];
+        cell.IdeaImageView.image = [UIImage imageNamed:@"HappyFace.png"];
         cell.NumOfHeartsLabel.text = myObject[@"difference"];
     }
     else if (_segmentControl.selectedSegmentIndex == 2)
     {
+        cell.IdeaImageView.image = [UIImage imageNamed:@"NeutralFace.png"];
         cell.NumOfHeartsLabel.text = [NSString stringWithFormat:@"-%@",myObject[@"dislikes"]];
     }
     

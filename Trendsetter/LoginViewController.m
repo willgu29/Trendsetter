@@ -11,6 +11,7 @@
 #import "PostIdeaViewController.h"
 #import "SettingsViewController.h"
 #import "DisplayIdeaViewController.h"
+#import "CardView.h"
 @interface LoginViewController ()
 {
     int cardsInStack;
@@ -212,11 +213,38 @@
 {
     if (direction == MDCSwipeDirectionLeft)
     {
-                NSLog(@"Left!");
+        NSLog(@"Left!");
+        PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
+        [query whereKey:@"ideaText" equalTo:[(CardView *)view cardText]];
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *myObject, NSError *error){
+            NSString *dislikesString = myObject[@"dislikes"];
+            NSString *likesString = myObject[@"likes"];
+            int likes = likesString.intValue;
+            int dislikes = dislikesString.intValue;
+            dislikes++;
+            int difference = likes - dislikes;
+            
+            myObject[@"dislikes"] = [NSString stringWithFormat:@"%d",dislikes];
+            myObject[@"difference"] = [NSString stringWithFormat:@"%d", difference];
+        }];
+        
     }
     else if (direction == MDCSwipeDirectionRight)
     {
-                NSLog(@"Right!");
+        NSLog(@"Right!");
+        PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
+        [query whereKey:@"ideaText" equalTo:[(CardView *)view cardText]];
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *myObject, NSError *error){
+            NSString *dislikesString = myObject[@"dislikes"];
+            NSString *likesString = myObject[@"likes"];
+            int likes = likesString.intValue;
+            int dislikes = dislikesString.intValue;
+            likes++;
+            int difference = likes - dislikes;
+            
+            myObject[@"likes"] = [NSString stringWithFormat:@"%d",likes];
+            myObject[@"difference"] = [NSString stringWithFormat:@"%d", difference];
+        }];
     }
     else if (direction == MDCSwipeDirectionNone)
     {

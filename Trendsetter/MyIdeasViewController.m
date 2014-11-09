@@ -9,7 +9,9 @@
 #import "MyIdeasViewController.h"
 #import "PostIdeaViewController.h"
 #import "SettingsViewController.h"
-
+#import <Parse/Parse.h>
+#import "CardView.h"
+#import "TabBarViewController.h"
 
 @interface MyIdeasViewController ()
 
@@ -32,6 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
+    [query whereKey:@"name" equalTo:[(TabBarViewController *)self.presentingViewController username]];
 }
 
 - (void)didReceiveMemoryWarning {
