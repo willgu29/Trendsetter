@@ -99,7 +99,7 @@
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CardView" owner:self options:nil];
     CardView *cardView  = [nib objectAtIndex:0];
     cardView.cardText.text = text;
-    _authorOf.text = author;
+    cardView.authorText.text = author;
     
     MDCSwipeOptions *options = [MDCSwipeOptions new];
     options.delegate = self;
@@ -228,6 +228,7 @@
             
             myObject[@"dislikes"] = [NSString stringWithFormat:@"%d",dislikes];
             myObject[@"difference"] = [NSString stringWithFormat:@"%d", difference];
+            [myObject saveInBackground];
         }];
         
     }
@@ -246,6 +247,8 @@
             
             myObject[@"likes"] = [NSString stringWithFormat:@"%d",likes];
             myObject[@"difference"] = [NSString stringWithFormat:@"%d", difference];
+            [myObject saveInBackground];
+
         }];
     }
     else if (direction == MDCSwipeDirectionNone)

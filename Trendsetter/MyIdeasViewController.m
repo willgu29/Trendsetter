@@ -17,6 +17,7 @@
 @interface MyIdeasViewController ()
 
 @property (nonatomic, strong) NSMutableArray *tableData;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
 
@@ -48,6 +49,11 @@
     query.limit = 20;
     temporaryArray = [query findObjects];
     _tableData = temporaryArray.copy;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

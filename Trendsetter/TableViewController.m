@@ -85,6 +85,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     //Get data
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {

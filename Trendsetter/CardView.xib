@@ -19,19 +19,29 @@
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="whiteboard" translatesAutoresizingMaskIntoConstraints="NO" id="L2z-AP-5ck">
                     <rect key="frame" x="0.0" y="-2" width="282" height="259"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Layer_8" translatesAutoresizingMaskIntoConstraints="NO" id="QFm-FA-TlP">
-                    <rect key="frame" x="0.0" y="255" width="282" height="80"/>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udv-tF-fIb">
                     <rect key="frame" x="13" y="14" width="254" height="203"/>
                     <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="28"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Layer_8" translatesAutoresizingMaskIntoConstraints="NO" id="QFm-FA-TlP">
+                    <rect key="frame" x="0.0" y="255" width="282" height="80"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJz-Aa-mgh">
+                    <rect key="frame" x="93" y="265" width="158" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Person40x40" translatesAutoresizingMaskIntoConstraints="NO" id="8WF-00-nfo">
+                    <rect key="frame" x="50" y="266" width="20" height="20"/>
+                </imageView>
             </subviews>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="authorText" destination="TJz-Aa-mgh" id="tMv-eu-0ja"/>
                 <outlet property="cardNumber" destination="F81-rN-i2R" id="HgC-9q-dFI"/>
                 <outlet property="cardText" destination="Udv-tF-fIb" id="l1k-4W-nT1"/>
             </connections>
@@ -40,6 +50,7 @@
     </objects>
     <resources>
         <image name="Layer_8" width="282" height="80"/>
+        <image name="Person40x40" width="20" height="20"/>
         <image name="whiteboard" width="282" height="259"/>
     </resources>
 </document>
