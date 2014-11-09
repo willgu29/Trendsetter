@@ -12,6 +12,10 @@
 
 @property (nonatomic, strong) NSString *cardText;
 @property (nonatomic) int cardNumber;
+@property (nonatomic, strong) NSString *authorOf;
+
+
+-(instancetype)initWithText:(NSString *)text andAuthor:(NSString *)author;
 
 -(instancetype)initWithText:(NSString *)text andNumber:(int)number;
 

@@ -21,4 +21,15 @@
     return self;
 }
 
+-(instancetype)initWithText:(NSString *)text andAuthor:(NSString *)author;
+{
+    self = [super init];
+    if (self)
+    {
+        _authorOf = author;
+        _cardText = text;
+    }
+    return self;
+}
+
 @end

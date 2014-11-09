@@ -11,6 +11,7 @@
 @interface CardView : UIView
 
 @property (nonatomic, weak) IBOutlet UILabel *cardText;
+@property (nonatomic, strong) NSString *authorOf;
 @property (nonatomic, weak) IBOutlet UILabel *cardNumber;
 
 //-(instancetype)initWithCardText:(NSString *)text andNumber:(int)number;

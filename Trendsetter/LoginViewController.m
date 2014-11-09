@@ -84,9 +84,15 @@
         {
             break;
         }
-        [self addCardToView:card.cardText andNumber:card.cardNumber];
+        [self addCardToView:card.cardText andAuthor:card.authorOf];
     }
 }
+
+-(void)addCardToView:(NSString *)text andAuthor:(NSString *)author
+{
+    
+}
+
 
 -(void)addCardToView:(NSString *)text andNumber:(int)number
 {

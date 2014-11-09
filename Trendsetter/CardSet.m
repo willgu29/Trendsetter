@@ -40,26 +40,38 @@ const int NUMBER_OF_CARDS_IN_DECK = 89;
 -(void)addCardsFromParse
 {
     //TODO:
-    NSMutableArray *temporaryArray = [[NSMutableArray alloc] init];
+    NSArray *temporaryArray = [[NSArray alloc] init];
 
     
     
     PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
     [query orderByDescending:@"updatedAt"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // The find succeeded. The first 100 objects are available in objects
-            [temporaryArray addObjectsFromArray:objects];
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
+    temporaryArray = [query findObjects];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        if (!error) {
+//            // The find succeeded. The first 100 objects are available in objects
+//            [temporaryArray addObjectsFromArray:objects];
+//        } else {
+//            // Log details of the failure
+//            NSLog(@"Error: %@ %@", error, [error userInfo]);
+//        }
+//    }];
 
-    _cardSet = temporaryArray;
-
+    [self parseParseArray:temporaryArray];
 }
 
+-(void)parseParseArray:(NSArray *)array
+{
+    NSMutableArray *temporaryArray = [[NSMutableArray alloc] init];
+
+    for (id object in array)
+    {
+        NSLog(@"Object: %@",object);
+        Card *card = [[Card alloc] initWithText:object[@"ideaText"] andAuthor:object[@"name"]];
+        [temporaryArray addObject:card];
+    }
+    _cardSet = temporaryArray;
+}
 
 
 

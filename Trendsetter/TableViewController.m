@@ -13,7 +13,7 @@
 
 @interface TableViewController ()
 
-@property (nonatomic, weak) NSMutableArray *tableData;
+@property (nonatomic, strong) NSMutableArray *tableData;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *segmentControl;
 
 @end
