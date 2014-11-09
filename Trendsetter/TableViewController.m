@@ -8,6 +8,9 @@
 
 #import "TableViewController.h"
 #import "TableViewCell.h"
+#import "SettingsViewController.h"
+#import "PostIdeaViewController.h"
+
 @interface TableViewController ()
 {
     NSArray *tableData;
@@ -19,6 +22,18 @@
 @end
 
 @implementation TableViewController
+
+-(IBAction)postButton:(UIButton *)sender
+{
+    PostIdeaViewController *postVC = [[PostIdeaViewController alloc] init];
+    [self presentViewController:postVC animated:YES completion:nil];
+}
+
+-(IBAction)settingsButton:(UIButton *)sender
+{
+    SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
+    [self presentViewController:settingsVC animated:YES completion:nil];
+}
 
 -(IBAction)segmentChanged:(UISegmentedControl *)sender
 {

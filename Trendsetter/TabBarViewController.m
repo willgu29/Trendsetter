@@ -7,12 +7,17 @@
 //
 
 #import "TabBarViewController.h"
-
+#import "PostIdeaViewController.h"
+#import "SettingsViewController.h"
 @interface TabBarViewController ()
 
 @end
 
 @implementation TabBarViewController
+
+
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

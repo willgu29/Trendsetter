@@ -7,12 +7,27 @@
 //
 
 #import "MyIdeasViewController.h"
+#import "PostIdeaViewController.h"
+#import "SettingsViewController.h"
+
 
 @interface MyIdeasViewController ()
 
 @end
 
 @implementation MyIdeasViewController
+
+-(IBAction)postButton:(UIButton *)sender
+{
+    PostIdeaViewController *postVC = [[PostIdeaViewController alloc] init];
+    [self presentViewController:postVC animated:YES completion:nil];
+}
+
+-(IBAction)settingsButton:(UIButton *)sender
+{
+    SettingsViewController *settingsVC = [[SettingsViewController alloc] init];
+    [self presentViewController:settingsVC animated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

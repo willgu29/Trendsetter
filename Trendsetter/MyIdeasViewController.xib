@@ -14,13 +14,47 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="GreyOverlay108" translatesAutoresizingMaskIntoConstraints="NO" id="5gr-LJ-qjz">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKJ-7I-VUU">
+                    <rect key="frame" x="267" y="19" width="53" height="29"/>
+                    <color key="tintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" image="plus">
+                        <color key="titleColor" red="0.82715654373168945" green="0.2008247971534729" blue="0.71039670705795288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="postButton:" destination="-1" eventType="touchUpInside" id="Dtk-TY-enZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdP-72-1Ep">
+                    <rect key="frame" x="8" y="17" width="50" height="34"/>
+                    <color key="tintColor" red="0.23647943139076233" green="0.73718690872192383" blue="0.60948425531387329" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="row reorder">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="settingsButton:" destination="-1" eventType="touchUpInside" id="ke1-Ui-JVh"/>
+                    </connections>
+                </button>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="dni-1S-LI9">
+                    <rect key="frame" x="75" y="22" width="178" height="27"/>
+                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1T9-sI-1yv">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="56" width="320" height="512"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="138" y="152"/>
         </view>
     </objects>
+    <resources>
+        <image name="GreyOverlay108" width="320" height="55"/>
+        <image name="plus" width="16" height="16"/>
+        <image name="row reorder" width="22" height="15"/>
+        <image name="title" width="178" height="27"/>
+    </resources>
 </document>
