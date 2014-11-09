@@ -12,10 +12,14 @@
 #import "SettingsViewController.h"
 #import "DisplayIdeaViewController.h"
 #import "CardView.h"
+#import "AppDelegate.h"
+#import "IntroViewController.h"
 @interface LoginViewController ()
 {
     int cardsInStack;
     int cardsGoneThrough;
+    BOOL firstTimeLeft;
+    BOOL firstTimeRight;
 }
 
 @property (nonatomic, weak) IBOutlet UIView *outOfCards;
@@ -58,7 +62,8 @@
     [_cardSet shuffleDeck];
     cardsInStack = 0;
     cardsGoneThrough = 0;
-    
+    firstTimeLeft = YES;
+    firstTimeRight = YES;
     
 }
 
@@ -231,6 +236,18 @@
             [myObject saveInBackground];
         }];
         
+        AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+        if (delegate.window.rootViewController == [IntroViewController class] && firstTimeLeft)
+        {
+            firstTimeLeft = NO;
+            UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Welcome to Trendsetter!"
+                                                                message:@"Swiping left means you dislike an idea..."
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"Ok"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        }
+        
     }
     else if (direction == MDCSwipeDirectionRight)
     {
@@ -250,6 +267,19 @@
             [myObject saveInBackground];
 
         }];
+        
+        AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+        if (delegate.window.rootViewController == [IntroViewController class] && firstTimeRight)
+        {
+            firstTimeRight = NO;
+            UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Welcome to Trendsetter!"
+                                                                message:@"Swiping right means you like an idea"
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"Swaggy"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+
+        }
     }
     else if (direction == MDCSwipeDirectionNone)
     {
