@@ -35,6 +35,14 @@ const int NUMBER_OF_CARDS_IN_DECK = 89;
     return self;
 }
 
+-(void)addCardsFromParse
+{
+    //TODO:
+    
+    
+    
+}
+
 
 -(void)addCardsToArray
 {

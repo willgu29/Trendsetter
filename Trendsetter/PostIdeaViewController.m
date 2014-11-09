@@ -9,6 +9,7 @@
 #import "PostIdeaViewController.h"
 #import "TabBarViewController.h"
 #import "AFNetworking.h"
+#import <Parse/Parse.h>
 
 @interface PostIdeaViewController ()
 
@@ -82,21 +83,32 @@
         return;
     }
     
-    int unixTime = [[NSDate date] timeIntervalSince1970];
-    NSLog(@"Unix Time: %d",unixTime);
-
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:[(TabBarViewController *)self.presentingViewController username], _textView.text, unixTime, nil];
-
-    [manager POST:@"http://www.trendsetting.me/post" parameters:params
-          success:^(AFHTTPRequestOperation *operation, id responseObject)
-     {
-         NSLog(@"JSON: %@", responseObject);
-     }
-          failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
-         NSLog(@"Error: %@", error );
-     }];
+    //Not querying for same types of posts... but oh well
+    
+    
+//    int unixTime = [[NSDate date] timeIntervalSince1970];
+//    NSLog(@"Unix Time: %d",unixTime);
+//
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:[(TabBarViewController *)self.presentingViewController username], _textView.text, unixTime, nil];
+//
+//    [manager POST:@"http://www.trendsetting.me/post" parameters:params
+//          success:^(AFHTTPRequestOperation *operation, id responseObject)
+//     {
+//         NSLog(@"JSON: %@", responseObject);
+//     }
+//          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+//     {
+//         NSLog(@"Error: %@", error );
+//     }];
+    
+    
+    PFObject *idea = [PFObject objectWithClassName:@"Ideas"];
+    idea[@"name"] = [(TabBarViewController *)self.presentingViewController username];
+    idea[@"ideaText"] = _textView.text;
+    idea[@"likes"] = 0;
+    idea[@"dislikes"] = 0;
+    [idea saveInBackground];
     
     [_textView resignFirstResponder];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
@@ -108,27 +120,7 @@
         [alertView show];
     }];
     
-//    NSMutableData *username = [[NSMutableData alloc] init];
-//    NSMutableData *idea = [[NSMutableData alloc] init];
-//    NSMutableData *time = [[NSMutableData alloc] init];
-//    [username appendData:[[(TabBarViewController *)self.presentingViewController username] dataUsingEncoding:NSUTF8StringEncoding]];
-//    [idea appendData:[_textView.text dataUsingEncoding:NSUTF8StringEncoding]];
-////    [time appendData:[NSNumber numberWithInt:unixTime]];
-//    
-//    NSDictionary *dictionary = @{username: idea};
-//    
-//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//   
-//    [manager POST:@"http://www.trendsetting.me/post" parameters: dictionary
-//     
-//          success:^(AFHTTPRequestOperation *operation, id responseObject)
-//     {
-//         NSLog(@"JSON: %@", responseObject);
-//     }
-//          failure:^(AFHTTPRequestOperation *operation, NSError *error)
-//     {
-//         NSLog(@"Error: %@", error );
-//     }];
+
 }
 
 -(void)textViewDidBeginEditing:(UITextView *)textView
