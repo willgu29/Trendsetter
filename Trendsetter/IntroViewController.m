@@ -172,13 +172,13 @@
     }
     else if (pageNumber == 2)
     {
-        image = nil;
-        self.text.text = @"And see how your own perform";
+        image = [UIImage imageNamed:@"postIdeas.png"];
+        self.text.text = @"Write ideas";
     }
     else if (pageNumber == 3)
     {
 //        image = [UIImage imageNamed:@"Heart40x40.png"];
-        image = nil;
+        image = [UIImage imageNamed:@"successPost.png"];
         self.text.text = @"Trendsetter Beta";
     }
     else
