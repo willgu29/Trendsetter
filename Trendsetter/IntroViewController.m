@@ -40,13 +40,32 @@
 -(IBAction)login:(UIButton *)sender
 {
     
+    if ([_textField.text isEqualToString:@""])
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"Please enter a username"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        return;
+    }
+    
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query whereKey:@"name" equalTo:_textField.text];
     PFUser *user = (PFUser *)[query getFirstObject];
     
-    NSLog(@"User? :%@",user);
     
-    
+    if ([user[@"name"] isEqualToString:_textField.text])
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"That username is already taken. Please choose another username"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        return;
+    }
     
     LoginViewController *loginVC = [[LoginViewController alloc] init];
     TableViewController *tableVC = [[TableViewController alloc] init];
@@ -220,7 +239,7 @@
 
 -(void)moveVC
 {
-    [self.view setFrame:CGRectMake(0, -220, self.view.frame.size.width, self.view.frame.size.height)];
+    [self.view setFrame:CGRectMake(0, -240, self.view.frame.size.width, self.view.frame.size.height)];
 }
 
 -(void)revertVC
