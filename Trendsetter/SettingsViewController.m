@@ -50,7 +50,7 @@
     else
     {
         UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                    message:@"Mail is not configured on this account. Please email support@trendsetting.me"
+                                                    message:@"Mail is not configured on this account. Please email support@trendsetting.me to report a bug"
                                                     delegate:nil
                                                     cancelButtonTitle:@"Ok"
                                                     otherButtonTitles:nil];
