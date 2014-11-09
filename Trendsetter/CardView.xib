@@ -28,14 +28,14 @@
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Layer_8" translatesAutoresizingMaskIntoConstraints="NO" id="QFm-FA-TlP">
                     <rect key="frame" x="0.0" y="255" width="282" height="80"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJz-Aa-mgh">
-                    <rect key="frame" x="93" y="265" width="158" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJz-Aa-mgh">
+                    <rect key="frame" x="72" y="285" width="138" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Person40x40" translatesAutoresizingMaskIntoConstraints="NO" id="8WF-00-nfo">
-                    <rect key="frame" x="50" y="266" width="20" height="20"/>
+                    <rect key="frame" x="42" y="284" width="20" height="20"/>
                 </imageView>
             </subviews>
             <nil key="simulatedStatusBarMetrics"/>
