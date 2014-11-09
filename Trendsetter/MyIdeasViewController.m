@@ -38,21 +38,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSArray *temporaryArray = [[NSArray alloc] init];
     _tableData = [[NSMutableArray alloc] init];
     
-    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+}
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    NSArray *temporaryArray = [[NSArray alloc] init];
+    
+    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+    
     
     PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
     [query whereKey:@"name" equalTo:username];
     query.limit = 20;
     temporaryArray = [query findObjects];
     _tableData = temporaryArray.copy;
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
     [self.tableView reloadData];
 }
 

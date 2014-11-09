@@ -74,17 +74,18 @@
     // Do any additional setup after loading the view from its nib.
     
     _temporaryArray = [[NSMutableArray alloc] init];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    //Get data
     //TODO: Load top posts
     PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
     query.limit = 25;
     [query orderByDescending:@"likes"];
     _temporaryArray = [query findObjects];
     _tableData = _temporaryArray.copy;
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    //Get data
     [self.tableView reloadData];
 }
 
