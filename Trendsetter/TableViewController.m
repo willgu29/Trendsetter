@@ -122,12 +122,12 @@
 //        NSString *dislikes = myObject[@"dislikes"];
 //        int difference = likes.intValue - dislikes.intValue;
 //        cell.NumOfHeartsLabel.text = [NSString stringWithFormat:@"%d",difference];
-        cell.IdeaImageView.image = [UIImage imageNamed:@"HappyFace.png"];
+        cell.IdeaImageView.image = [UIImage imageNamed:@"NeutralFace.png"];
         cell.NumOfHeartsLabel.text = myObject[@"difference"];
     }
     else if (_segmentControl.selectedSegmentIndex == 2)
     {
-        cell.IdeaImageView.image = [UIImage imageNamed:@"NeutralFace.png"];
+        cell.IdeaImageView.image = [UIImage imageNamed:@"NegativeFace.png"];
         cell.NumOfHeartsLabel.text = [NSString stringWithFormat:@"-%@",myObject[@"dislikes"]];
     }
     
