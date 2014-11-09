@@ -10,12 +10,13 @@
 #import "TableViewCell.h"
 #import "SettingsViewController.h"
 #import "PostIdeaViewController.h"
+#import <Parse/Parse.h>
 
 @interface TableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *tableData;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *segmentControl;
-
+@property (nonatomic, strong) NSArray *temporaryArray;
 @end
 
 @implementation TableViewController
@@ -34,22 +35,35 @@
 
 -(IBAction)segmentChanged:(UISegmentedControl *)sender
 {
+    PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
+    query.limit = 25;
     if (sender.selectedSegmentIndex == 0)
     {
         //Top
+        [query orderByDescending:@"likes"];
+        _temporaryArray = [query findObjects];
+        _tableData = _temporaryArray.copy;
     }
     else if (sender.selectedSegmentIndex == 1)
     {
         //Controversial
+
+        [query orderByAscending:@"difference"];
+        _temporaryArray = [query findObjects];
+        _tableData = _temporaryArray.copy;
     }
     else if (sender.selectedSegmentIndex == 2)
     {
         //Worst
+        [query orderByDescending:@"dislikes"];
+        _temporaryArray = [query findObjects];
+        _tableData = _temporaryArray.copy;
     }
     else
     {
         NSLog(@"IMPOSSIBLE.");
     }
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
@@ -58,6 +72,14 @@
     _tableData = [[NSMutableArray alloc] init];
     [self.tableView setContentInset:UIEdgeInsetsMake(0,0,0,0)];
     // Do any additional setup after loading the view from its nib.
+    
+    _temporaryArray = [[NSMutableArray alloc] init];
+    //TODO: Load top posts
+    PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
+    query.limit = 25;
+    [query orderByDescending:@"likes"];
+    _temporaryArray = [query findObjects];
+    _tableData = _temporaryArray.copy;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -78,17 +100,34 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *tableViewCell = @"TableViewCell";
-    
+//    static NSString *tableViewCell = @"NoReuse";
     TableViewCell *cell = (TableViewCell *)[tableView dequeueReusableCellWithIdentifier:tableViewCell];
     if (cell == nil)
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-    
-    //cell.IdeaSummaryLabel.text = [tableSumData objectAtIndex:indexPath.row];
+    id myObject = [_tableData objectAtIndex:indexPath.row];
+    cell.IdeaSummaryLabel.text = myObject[@"ideaText"];
     cell.IdeaImageView.image = [UIImage imageNamed:@"HappyFace.png"];
-    cell.NumOfHeartsLabel.text = @"+ 10";
+    if (_segmentControl.selectedSegmentIndex == 0)
+    {
+        cell.NumOfHeartsLabel.text = [NSString stringWithFormat:@"+%@",myObject[@"likes"]];
+    }
+    else if (_segmentControl.selectedSegmentIndex == 1)
+    {
+//        NSString *likes = myObject[@"likes"];
+//        NSString *dislikes = myObject[@"dislikes"];
+//        int difference = likes.intValue - dislikes.intValue;
+//        cell.NumOfHeartsLabel.text = [NSString stringWithFormat:@"%d",difference];
+        cell.NumOfHeartsLabel.text = myObject[@"difference"];
+    }
+    else if (_segmentControl.selectedSegmentIndex == 2)
+    {
+        cell.NumOfHeartsLabel.text = [NSString stringWithFormat:@"-%@",myObject[@"dislikes"]];
+    }
+    
+    cell.timeAndAuthor.text = [NSString stringWithFormat:@"Posted by %@", myObject[@"name"]];
     
     return cell;
 }

@@ -28,8 +28,10 @@
 @implementation LoginViewController
 
 
-
-
+-(IBAction)outOfCards:(UIButton *)sender
+{
+    [_cardSet addCardsFromParse];
+}
 
 -(IBAction)postButton:(UIButton *)sender
 {
@@ -50,7 +52,7 @@
     _cardSet = [[CardSet alloc] init];
     _tableSet = [[CardSet alloc] init];
     
-//    [_cardSet shuffleDeck];
+    [_cardSet shuffleDeck];
     cardsInStack = 0;
     cardsGoneThrough = 0;
     
@@ -90,7 +92,32 @@
 
 -(void)addCardToView:(NSString *)text andAuthor:(NSString *)author
 {
+    cardsInStack++;
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CardView" owner:self options:nil];
+    CardView *cardView  = [nib objectAtIndex:0];
+    cardView.cardText.text = text;
+    _authorOf.text = author;
     
+    MDCSwipeOptions *options = [MDCSwipeOptions new];
+    options.delegate = self;
+    options.onPan = ^(MDCPanState *state){
+        if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionLeft) {
+            //            NSLog(@"Let go now to delete the photo!");
+        }
+        if (state.thresholdRatio == 1.f && state.direction == MDCSwipeDirectionRight) {
+            //            NSLog(@"Let go now to delete the photo!");
+        }
+    };
+    [cardView setFrame:CGRectMake(18, 90, cardView.frame.size.width, cardView.frame.size.height)];
+    [cardView mdc_swipeToChooseSetup:options];
+    
+    //    [self.view addSubview:cardView];
+    
+    //TODO: animate
+    
+    //ANIMATE
+    
+    [self.view insertSubview:cardView aboveSubview:_outOfCards];
 }
 
 
@@ -100,7 +127,7 @@
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CardView" owner:self options:nil];
     CardView *cardView  = [nib objectAtIndex:0];
     cardView.cardText.text = text;
-    _authorOf.text = cardView.authorOf;
+    cardView.cardNumber.text = [NSString stringWithFormat:@"%d",number];
     
     MDCSwipeOptions *options = [MDCSwipeOptions new];
     options.delegate = self;
@@ -183,9 +210,12 @@
 
 -(void)view:(UIView *)view wasChosenWithDirection:(MDCSwipeDirection)direction
 {
-    if (direction == MDCSwipeDirectionLeft) {
+    if (direction == MDCSwipeDirectionLeft)
+    {
                 NSLog(@"Left!");
-    } else if (direction == MDCSwipeDirectionRight) {
+    }
+    else if (direction == MDCSwipeDirectionRight)
+    {
                 NSLog(@"Right!");
     }
     else if (direction == MDCSwipeDirectionNone)

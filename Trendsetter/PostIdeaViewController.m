@@ -109,6 +109,7 @@
     idea[@"ideaText"] = _textView.text;
     idea[@"likes"] = @"0";
     idea[@"dislikes"] = @"0";
+    idea[@"difference"] = @"0";
     [idea saveInBackground];
     
     [_textView resignFirstResponder];

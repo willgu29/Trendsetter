@@ -22,5 +22,6 @@
 -(void)shuffleDeck;
 -(int)count;
 -(int)cardsLeftNormal;
+-(void)addCardsFromParse;
 
 @end

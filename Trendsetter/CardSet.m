@@ -10,7 +10,7 @@
 #import "Card.h"
 #import <Parse/Parse.h>
 
-const int NUMBER_OF_CARDS_IN_DECK = 50;
+const int NUMBER_OF_CARDS_IN_DECK = 20;
 
 @interface CardSet()
 {
@@ -45,6 +45,7 @@ const int NUMBER_OF_CARDS_IN_DECK = 50;
     
     
     PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
+    query.limit = 20;
     [query orderByDescending:@"updatedAt"];
     temporaryArray = [query findObjects];
 //    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
