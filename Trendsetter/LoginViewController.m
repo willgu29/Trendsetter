@@ -50,7 +50,7 @@
     _cardSet = [[CardSet alloc] init];
     _tableSet = [[CardSet alloc] init];
     
-    [_cardSet shuffleDeck];
+//    [_cardSet shuffleDeck];
     cardsInStack = 0;
     cardsGoneThrough = 0;
     
@@ -70,7 +70,7 @@
 -(void)displayNewDeckTop
 {
     Card *card = [_cardSet getCardNumber:0];
-    [self addCardToView:card.cardText andNumber:card.cardNumber];
+    [self addCardToView:card.cardText andAuthor:card.authorOf];
     
     NSArray *arrayOfCards = [_cardSet getNextFiveCards];
     [self forArrayAddToView:arrayOfCards];
@@ -99,8 +99,8 @@
     cardsInStack++;
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CardView" owner:self options:nil];
     CardView *cardView  = [nib objectAtIndex:0];
-    cardView.cardNumber.text = [NSString stringWithFormat:@"%d/%d",number, [_cardSet count]];
     cardView.cardText.text = text;
+    _authorOf.text = cardView.authorOf;
     
     MDCSwipeOptions *options = [MDCSwipeOptions new];
     options.delegate = self;

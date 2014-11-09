@@ -10,7 +10,7 @@
 #import "Card.h"
 #import <Parse/Parse.h>
 
-const int NUMBER_OF_CARDS_IN_DECK = 89;
+const int NUMBER_OF_CARDS_IN_DECK = 50;
 
 @interface CardSet()
 {
