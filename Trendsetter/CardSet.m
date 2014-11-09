@@ -29,7 +29,8 @@ const int NUMBER_OF_CARDS_IN_DECK = 89;
     self = [super init];
     if (self)
     {
-        [self addCardsToArray];
+//        [self addCardsToArray];
+        [self addCardsFromParse];
         _onCardNumber = 0;
         outOfCards = NO;
     }
@@ -39,15 +40,27 @@ const int NUMBER_OF_CARDS_IN_DECK = 89;
 -(void)addCardsFromParse
 {
     //TODO:
+    NSMutableArray *temporaryArray = [[NSMutableArray alloc] init];
+
+    
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
-    query.limit = 100;
     [query orderByDescending:@"updatedAt"];
-    PFUser *user = (PFUser *)[query getFirstObject];
-    
-    NSLog(@"User? :%@",user);
-    
-    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded. The first 100 objects are available in objects
+            [temporaryArray addObjectsFromArray:objects];
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+
+    _cardSet = temporaryArray;
+
 }
+
+
 
 
 -(void)addCardsToArray
