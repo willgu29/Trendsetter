@@ -12,7 +12,7 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *likes;
 @property (nonatomic, weak) IBOutlet UILabel *dislikes;
-@property (nonatomic, weak) IBOutlet UILabel *textIdea;
+@property (nonatomic, weak) IBOutlet UILabel *ideaText;
 @property (nonatomic, weak) IBOutlet UILabel *timeSincePost;
 
 @end

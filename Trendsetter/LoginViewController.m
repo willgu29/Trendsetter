@@ -215,7 +215,7 @@
     {
         NSLog(@"Left!");
         PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
-        [query whereKey:@"ideaText" equalTo:[(CardView *)view cardText]];
+        [query whereKey:@"ideaText" equalTo:[(CardView *)view cardText].text];
         [query getFirstObjectInBackgroundWithBlock:^(PFObject *myObject, NSError *error){
             NSString *dislikesString = myObject[@"dislikes"];
             NSString *likesString = myObject[@"likes"];
@@ -233,7 +233,7 @@
     {
         NSLog(@"Right!");
         PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
-        [query whereKey:@"ideaText" equalTo:[(CardView *)view cardText]];
+        [query whereKey:@"ideaText" equalTo:[(CardView *)view cardText].text];
         [query getFirstObjectInBackgroundWithBlock:^(PFObject *myObject, NSError *error){
             NSString *dislikesString = myObject[@"dislikes"];
             NSString *likesString = myObject[@"likes"];

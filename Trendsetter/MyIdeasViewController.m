@@ -37,10 +37,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    NSArray *temporaryArray = [[NSArray alloc] init];
     _tableData = [[NSMutableArray alloc] init];
     
+    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
-    [query whereKey:@"name" equalTo:[(TabBarViewController *)self.presentingViewController username]];
+    [query whereKey:@"name" equalTo:username];
+    query.limit = 20;
+    temporaryArray = [query findObjects];
+    _tableData = temporaryArray.copy;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +66,11 @@
         cell = [nib objectAtIndex:0];
     }
     id myObject = [_tableData objectAtIndex:indexPath.row];
+    
+    cell.likes.text = myObject[@"likes"];
+    cell.dislikes.text = myObject[@"dislikes"];
+//    cell.timeSincePost.text = nil;
+    cell.ideaText.text = myObject[@"ideaText"];
     
     return cell;
 }
