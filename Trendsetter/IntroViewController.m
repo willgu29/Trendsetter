@@ -162,23 +162,24 @@
     UIImage *image = [[UIImage alloc] init];
     if (pageNumber == 0)
     {
-        image = [UIImage imageNamed:@"Heart40x40.png"];
-        self.text.text = @"Re-discover Instagram";
+        image = [UIImage imageNamed:@"Screenshot1.png"];
+        self.text.text = @"Swipe Great or Nope on ideas by your peers";
     }
     else if (pageNumber == 1)
     {
-        image = [UIImage imageNamed:@"contacts.png"];
-        self.text.text = @"Hold then drag";
+        image = [UIImage imageNamed:@"Screenshot2.png"];
+        self.text.text = @"Browse trending ideas";
     }
     else if (pageNumber == 2)
     {
-        image = [UIImage imageNamed:@"world clock.png"];
-        self.text.text = @"Hold to pause";
+        image = nil;
+        self.text.text = @"And see how your own perform";
     }
     else if (pageNumber == 3)
     {
-        image = [UIImage imageNamed:@"Heart40x40.png"];
-        self.text.text = @"And find new photos";
+//        image = [UIImage imageNamed:@"Heart40x40.png"];
+        image = nil;
+        self.text.text = @"Trendsetter Beta";
     }
     else
     {
