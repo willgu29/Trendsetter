@@ -10,4 +10,7 @@
 
 @interface TabBarViewController : UITabBarController
 
+@property (nonatomic, strong) NSString *username;
+
+
 @end

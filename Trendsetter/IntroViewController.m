@@ -20,7 +20,7 @@
 @property (nonatomic, weak) IBOutlet UIView *currentPage;
 @property (nonatomic, weak) IBOutlet UILabel *text;
 @property (nonatomic, weak) IBOutlet UIButton *loginButton;
-
+@property (nonatomic, weak) IBOutlet UITextField *textField;
 
 @end
 
@@ -51,7 +51,7 @@
     tabBarVC.viewControllers = [NSArray arrayWithObjects:loginVC, tableVC, myVC, nil];
     
     
-    
+    tabBarVC.username = _textField.text;
     
     [self presentViewController:tabBarVC animated:YES completion:nil];
 }

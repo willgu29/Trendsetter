@@ -10,6 +10,7 @@
                 <outlet property="loginButton" destination="Mo3-fe-InH" id="IAM-SE-HcN"/>
                 <outlet property="pageControl" destination="PCU-ox-pHH" id="YZY-PA-3uW"/>
                 <outlet property="text" destination="uCO-M5-FwK" id="J2m-6O-dcD"/>
+                <outlet property="textField" destination="ao4-6Q-RBj" id="cTf-Vt-xcX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

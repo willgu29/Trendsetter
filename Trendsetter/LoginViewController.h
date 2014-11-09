@@ -11,6 +11,7 @@
 #import "CardSet.h"
 @interface LoginViewController : UIViewController <MDCSwipeToChooseDelegate>
 
+
 @property (nonatomic, strong) CardSet *cardSet;
 @property (nonatomic, strong) CardSet *tableSet;
 

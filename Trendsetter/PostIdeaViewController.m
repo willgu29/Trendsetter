@@ -7,6 +7,7 @@
 //
 
 #import "PostIdeaViewController.h"
+#import "TabBarViewController.h"
 
 @interface PostIdeaViewController ()
 
@@ -71,6 +72,25 @@
 -(IBAction)postButton:(UIButton *)sender
 {
     //TODO: Post
+//    _textView.text, _headlineLabel.text, [(TabBarViewController*)self.presentingViewController username];
+    //blah
+    
+    if ([_textView.text isEqualToString:@"What is your new idea?"])
+    {
+        //Don't post
+        return;
+    }
+    [_textView resignFirstResponder];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Success!"
+                                                            message:@"Your idea has been posted!"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Trendy!"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }];
+    
+    
 }
 
 -(void)textViewDidBeginEditing:(UITextView *)textView
