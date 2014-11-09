@@ -8,6 +8,7 @@
 
 #import "CardSet.h"
 #import "Card.h"
+#import <Parse/Parse.h>
 
 const int NUMBER_OF_CARDS_IN_DECK = 89;
 
@@ -38,7 +39,12 @@ const int NUMBER_OF_CARDS_IN_DECK = 89;
 -(void)addCardsFromParse
 {
     //TODO:
+    PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
+    query.limit = 100;
+    [query orderByDescending:@"updatedAt"];
+    PFUser *user = (PFUser *)[query getFirstObject];
     
+    NSLog(@"User? :%@",user);
     
     
 }

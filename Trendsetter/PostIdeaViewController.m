@@ -82,7 +82,6 @@
         //Don't post
         return;
     }
-    
     //Not querying for same types of posts... but oh well
     
     
@@ -102,12 +101,14 @@
 //         NSLog(@"Error: %@", error );
 //     }];
     
+    NSLog(@"Username: %@",[(TabBarViewController *)self.presentingViewController username]);
+    NSLog(@"Idea: %@", _textView.text);
     
     PFObject *idea = [PFObject objectWithClassName:@"Ideas"];
     idea[@"name"] = [(TabBarViewController *)self.presentingViewController username];
     idea[@"ideaText"] = _textView.text;
-    idea[@"likes"] = 0;
-    idea[@"dislikes"] = 0;
+    idea[@"likes"] = @"0";
+    idea[@"dislikes"] = @"0";
     [idea saveInBackground];
     
     [_textView resignFirstResponder];
