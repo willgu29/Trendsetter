@@ -53,6 +53,11 @@
     [_cardSet shuffleDeck];
     cardsInStack = 0;
     cardsGoneThrough = 0;
+    
+    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    testObject[@"foo"] = @"bar";
+    [testObject saveInBackground];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated

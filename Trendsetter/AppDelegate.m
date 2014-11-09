@@ -12,6 +12,7 @@
 #import "TableViewController.h"
 #import "MyIdeasViewController.h"
 #import "IntroViewController.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -24,11 +25,29 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    
-    
+    [Parse setApplicationId:@"jRr2J6zFk7wSYVNYQGS2FXezhpTR4S7HB20lnW5E"
+                  clientKey:@"kAd4pT9I7s03aUh9JiCmUq7ONGXLr3KZTyvL1i4Q"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     //TODO:
     //if Device ID is present in database, just login.
     //Otherwise, got to intro page, login w/ new username.
+    
+    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+    
+    if (username == nil)
+    {
+        //go to login
+        IntroViewController *introVC = [[IntroViewController alloc] init];
+        self.window.rootViewController = introVC;
+        self.window.backgroundColor = [UIColor whiteColor];
+        [self.window makeKeyAndVisible];
+        return YES;
+
+    }
+    else
+    {
+        //go to app!
+    }
     
     
     LoginViewController *loginVC = [[LoginViewController alloc] init];
@@ -56,8 +75,7 @@
     
     TabBarViewController *tabBarVC = [[TabBarViewController alloc] init];
     tabBarVC.viewControllers = [NSArray arrayWithObjects:loginVC, tableVC, myVC, nil];
-    
-//    IntroViewController *introVC = [[IntroViewController alloc] init];
+    tabBarVC.username = username;
     
     
     self.window.rootViewController = tabBarVC;

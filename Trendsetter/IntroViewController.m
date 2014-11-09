@@ -12,7 +12,7 @@
 #import "TableViewController.h"
 #import "MyIdeasViewController.h"
 
-#import "ImageScrollView.h"
+//#import "ImageScrollView.h"
 
 @interface IntroViewController ()
 
@@ -28,16 +28,25 @@
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    
+    [self moveVC];
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField
 {
     //TODO: Save to database
+    [self revertVC];
 }
 
 -(IBAction)login:(UIButton *)sender
 {
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    [query whereKey:@"name" equalTo:_textField.text];
+    PFUser *user = (PFUser *)[query getFirstObject];
+    
+    NSLog(@"User? :%@",user);
+    
+    
     
     LoginViewController *loginVC = [[LoginViewController alloc] init];
     TableViewController *tableVC = [[TableViewController alloc] init];
@@ -70,6 +79,13 @@
     
     
     tabBarVC.username = _textField.text;
+    [[NSUserDefaults standardUserDefaults] setObject:_textField.text forKey:@"username"];
+    
+    
+    PFObject *username = [PFObject objectWithClassName:@"User"];
+    username[@"name"] = _textField.text;
+    [username saveInBackground];
+    
     
     [self presentViewController:tabBarVC animated:YES completion:nil];
 }
@@ -168,18 +184,18 @@
     _pageControl.numberOfPages = 4;
 
     
-    
-    ImageScrollView *imageScroll = [[ImageScrollView alloc] initWithFrame:CGRectMake(40, 20, 162, 338)];
-    
-    UIImage *image1 = [UIImage imageNamed:@"Clipped.png"];
-    UIImage *image2 = [UIImage imageNamed:@"contacts.png"];
-    UIImage *image3 = [UIImage imageNamed:@"Heart40x40.png"];
-    UIImage *image4 = [UIImage imageNamed:@"Info40x40.png"];
-    
-    [imageScroll setScrollViewContents:@[image1, image2, image3, image4]];
-    imageScroll.imageControlPos = ImageControlPositionCenterBottom;
-    
-    [self.view addSubview:imageScroll];
+//    
+//    ImageScrollView *imageScroll = [[ImageScrollView alloc] initWithFrame:CGRectMake(40, 20, 162, 338)];
+//    
+//    UIImage *image1 = [UIImage imageNamed:@"Clipped.png"];
+//    UIImage *image2 = [UIImage imageNamed:@"contacts.png"];
+//    UIImage *image3 = [UIImage imageNamed:@"Heart40x40.png"];
+//    UIImage *image4 = [UIImage imageNamed:@"Info40x40.png"];
+//    
+//    [imageScroll setScrollViewContents:@[image1, image2, image3, image4]];
+//    imageScroll.imageControlPos = ImageControlPositionCenterBottom;
+//    
+//    [self.view addSubview:imageScroll];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -187,6 +203,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)resignKeyboard
+{
+    NSLog(@"Resign keyboard");
+    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
+    
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self resignKeyboard];
+}
+
+
+
+-(void)moveVC
+{
+    [self.view setFrame:CGRectMake(0, -220, self.view.frame.size.width, self.view.frame.size.height)];
+}
+
+-(void)revertVC
+{
+    [self.view setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    
+}
 /*
 #pragma mark - Navigation
 

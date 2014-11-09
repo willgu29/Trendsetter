@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "MDCSwipeToChoose.h"
 #import "CardSet.h"
+
+#import <Parse/Parse.h>
+
 @interface LoginViewController : UIViewController <MDCSwipeToChooseDelegate>
 
 

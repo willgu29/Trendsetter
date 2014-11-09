@@ -12,11 +12,8 @@
 #import "PostIdeaViewController.h"
 
 @interface TableViewController ()
-{
-    NSArray *tableData;
-    NSArray *tableSumData;
-}
 
+@property (nonatomic, weak) NSMutableArray *tableData;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *segmentControl;
 
 @end
@@ -58,13 +55,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    _tableData = [[NSMutableArray alloc] init];
     [self.tableView setContentInset:UIEdgeInsetsMake(0,0,0,0)];
-
-    
-    tableData = [NSArray arrayWithObjects:@"Idea 1: by KANYEWEST" , @"Idea 2: by JAYZ", @"Idea 3 by OBAMA", @"Idea 4: CREATED BY LIFE", nil];
-    tableSumData = [NSArray arrayWithObjects:@"Idea1SUMMARY", @"IDEA2Summary", @"IDEA3SUMMARY", @"IDEA4SUMMARY", nil];
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    //Get data
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,7 +72,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [tableData count];
+    return [_tableData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
