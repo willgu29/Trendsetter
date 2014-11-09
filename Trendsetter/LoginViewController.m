@@ -32,6 +32,8 @@
 -(IBAction)outOfCards:(UIButton *)sender
 {
     [_cardSet addCardsFromParse];
+    [_cardSet shuffleDeck];
+    [self displayNewDeckTop];
 }
 
 -(IBAction)postButton:(UIButton *)sender

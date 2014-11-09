@@ -67,8 +67,8 @@
     }
     id myObject = [_tableData objectAtIndex:indexPath.row];
     
-    cell.likes.text = myObject[@"likes"];
-    cell.dislikes.text = myObject[@"dislikes"];
+    cell.likes.text = [NSString stringWithFormat:@"# of Likes: %@",myObject[@"likes"]];
+    cell.dislikes.text = [NSString stringWithFormat:@"%@ :# of Dislikes",myObject[@"dislikes"]];
 //    cell.timeSincePost.text = nil;
     cell.ideaText.text = myObject[@"ideaText"];
     

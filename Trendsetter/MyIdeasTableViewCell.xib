@@ -42,8 +42,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="dislikes" destination="mFF-lq-Kta" id="11C-VK-H1f"/>
+                <outlet property="ideaText" destination="5fg-at-ack" id="kNb-fa-kJ1"/>
                 <outlet property="likes" destination="k1n-xz-ISx" id="Uxb-pY-vzV"/>
-                <outlet property="textIdea" destination="5fg-at-ack" id="PFI-KO-1s7"/>
                 <outlet property="timeSincePost" destination="DYx-FR-SXm" id="HNS-Cr-SB1"/>
             </connections>
             <point key="canvasLocation" x="245" y="283"/>
