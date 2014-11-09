@@ -51,9 +51,19 @@
     UIImage *image2 = [[UIImage imageNamed:@"Trend.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIImage *image3 = [[UIImage imageNamed:@"Ideas.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
+
+    UIImage *image4 = [[UIImage imageNamed:@"Swipe.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *image5 = [[UIImage imageNamed:@"Trend.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *image6 = [[UIImage imageNamed:@"Ideas.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     loginVC.tabBarItem.image = image1;
     tableVC.tabBarItem.image = image2;
     myVC.tabBarItem.image = image3;
+    
+    loginVC.tabBarItem.selectedImage = image4;
+    tableVC.tabBarItem.selectedImage = image5;
+    myVC.tabBarItem.selectedImage = image6;
+    
     
     TabBarViewController *tabBarVC = [[TabBarViewController alloc] init];
     tabBarVC.viewControllers = [NSArray arrayWithObjects:loginVC, tableVC, myVC, nil];
