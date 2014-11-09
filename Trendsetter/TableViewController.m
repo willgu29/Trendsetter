@@ -20,6 +20,26 @@
 
 @implementation TableViewController
 
+-(IBAction)segmentChanged:(UISegmentedControl *)sender
+{
+    if (sender.selectedSegmentIndex == 0)
+    {
+        //Top
+    }
+    else if (sender.selectedSegmentIndex == 1)
+    {
+        //Controversial
+    }
+    else if (sender.selectedSegmentIndex == 2)
+    {
+        //Worst
+    }
+    else
+    {
+        NSLog(@"IMPOSSIBLE.");
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

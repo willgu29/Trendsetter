@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableViewController">
             <connections>
+                <outlet property="segmentControl" destination="ayS-EQ-Hqt" id="uqA-a5-JKt"/>
                 <outlet property="tableView" destination="vko-5R-zk3" id="dkA-63-uGp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,6 +23,9 @@
                         <segment title="Controversial"/>
                         <segment title="Worst"/>
                     </segments>
+                    <connections>
+                        <action selector="segmentChanged:" destination="-1" eventType="valueChanged" id="iYX-wG-bWF"/>
+                    </connections>
                 </segmentedControl>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vko-5R-zk3">
                     <rect key="frame" x="0.0" y="86" width="320" height="451"/>

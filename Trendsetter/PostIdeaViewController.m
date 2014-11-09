@@ -8,6 +8,7 @@
 
 #import "PostIdeaViewController.h"
 #import "TabBarViewController.h"
+#import "AFNetworking.h"
 
 @interface PostIdeaViewController ()
 
@@ -80,6 +81,20 @@
         //Don't post
         return;
     }
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:[(TabBarViewController *)self.presentingViewController username], _textView.text, nil];
+
+    [manager POST:@"http://www.trendsetting.me/post" parameters:params
+          success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSLog(@"JSON: %@", responseObject);
+     }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         NSLog(@"Error: %@", error );
+     }];
+    
     [_textView resignFirstResponder];
     [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
         UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Success!"
