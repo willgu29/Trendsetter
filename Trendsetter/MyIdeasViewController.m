@@ -12,8 +12,11 @@
 #import <Parse/Parse.h>
 #import "CardView.h"
 #import "TabBarViewController.h"
+#import "MyIdeasTableViewCell.h"
 
 @interface MyIdeasViewController ()
+
+@property (nonatomic, strong) NSMutableArray *tableData;
 
 @end
 
@@ -34,6 +37,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    _tableData = [[NSMutableArray alloc] init];
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Ideas"];
     [query whereKey:@"name" equalTo:[(TabBarViewController *)self.presentingViewController username]];
 }
@@ -43,6 +48,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *tableViewCell = @"IdeaCell";
+    //    static NSString *tableViewCell = @"NoReuse";
+    MyIdeasTableViewCell *cell = (MyIdeasTableViewCell *)[tableView dequeueReusableCellWithIdentifier:tableViewCell];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"MyIdeasTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    id myObject = [_tableData objectAtIndex:indexPath.row];
+    
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 180;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_tableData count];
+}
 
 /*
 #pragma mark - Navigation

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyIdeasViewController : UIViewController
+@interface MyIdeasViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
