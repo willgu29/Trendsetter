@@ -39,6 +39,14 @@
     tableVC.title = @"Trending";
     myVC.title = @"Ideas";
     
+    UIImage *image1 = [UIImage imageNamed:@"Swipe.png"];
+    UIImage *image2 = [UIImage imageNamed:@"Trend.png"];
+    UIImage *image3 = [UIImage imageNamed:@"Ideas.png"];
+    
+    loginVC.tabBarItem.image = image1;
+    tableVC.tabBarItem.image = image2;
+    myVC.tabBarItem.image = image3;
+    
     TabBarViewController *tabBarVC = [[TabBarViewController alloc] init];
     tabBarVC.viewControllers = [NSArray arrayWithObjects:loginVC, tableVC, myVC, nil];
     

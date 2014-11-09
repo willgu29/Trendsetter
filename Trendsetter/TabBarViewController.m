@@ -17,11 +17,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    UITabBar *tabBar = self.tabBar;
+    UITabBarItem *targetTabBarItem1 = [[tabBar items] objectAtIndex: 0];
+    UITabBarItem *targetTabBarItem2 = [[tabBar items] objectAtIndex: 1];
+    UITabBarItem *targetTabBarItem3 = [[tabBar items] objectAtIndex: 2];
+    
+    UIImage *image1 = [[UIImage imageNamed:@"Swipe.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *image2 = [[UIImage imageNamed:@"Trend.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *image3 = [[UIImage imageNamed:@"Ideas.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    //
+    //    [targetTabBarItem1 setImage:image1];
+    //    [targetTabBarItem2 setImage:image2];
+    //    [targetTabBarItem3 setImage:image3];
+    
+    
+    [targetTabBarItem1 setSelectedImage:image1];
+    [targetTabBarItem2 setSelectedImage:image2];
+    [targetTabBarItem3 setSelectedImage:image3];
+
 }
 
 /*

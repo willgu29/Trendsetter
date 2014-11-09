@@ -73,7 +73,7 @@
 {
     //TODO: Post
 //    _textView.text, _headlineLabel.text, [(TabBarViewController*)self.presentingViewController username];
-    //blah
+    //blah  timeOfPost();
     
     if ([_textView.text isEqualToString:@"What is your new idea?"])
     {
