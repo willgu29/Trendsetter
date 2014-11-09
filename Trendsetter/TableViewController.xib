@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableViewController">
             <connections>
-                <outlet property="tableView" destination="1r8-Qr-Rt0" id="BPj-Or-ifx"/>
+                <outlet property="tableView" destination="vko-5R-zk3" id="dkA-63-uGp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,12 +15,20 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="1r8-Qr-Rt0">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ayS-EQ-Hqt">
+                    <rect key="frame" x="18" y="50" width="284" height="29"/>
+                    <segments>
+                        <segment title="Top"/>
+                        <segment title="Controversial"/>
+                        <segment title="Worst"/>
+                    </segments>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vko-5R-zk3">
+                    <rect key="frame" x="0.0" y="86" width="320" height="451"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="TDp-0t-NBC"/>
-                        <outlet property="delegate" destination="-1" id="wMq-YT-G5d"/>
+                        <outlet property="dataSource" destination="-1" id="GGR-JB-2GC"/>
+                        <outlet property="delegate" destination="-1" id="Ata-7e-Dxz"/>
                     </connections>
                 </tableView>
             </subviews>

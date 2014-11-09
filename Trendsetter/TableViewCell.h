@@ -10,10 +10,9 @@
 
 @interface TableViewCell : UITableViewCell
 
-@property (nonatomic, weak) IBOutlet UILabel *IdeaNameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *IdeaSummaryLabel;
 @property (nonatomic, weak) IBOutlet UILabel *NumOfHeartsLabel;
-@property (nonatomic, weak) IBOutlet UILabel *NumOfXsLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *IdeaImageView;
+@property (nonatomic, weak) IBOutlet UILabel *timeAndAuthor;
 
 @end

@@ -14,6 +14,8 @@
     NSArray *tableSumData;
 }
 
+@property (nonatomic, weak) IBOutlet UISegmentedControl *segmentControl;
+
 @end
 
 @implementation TableViewController
@@ -22,7 +24,7 @@
     [super viewDidLoad];
     
     
-    [self.tableView setContentInset:UIEdgeInsetsMake(60,0,0,0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake(0,0,0,0)];
 
     
     tableData = [NSArray arrayWithObjects:@"Idea 1: by KANYEWEST" , @"Idea 2: by JAYZ", @"Idea 3 by OBAMA", @"Idea 4: CREATED BY LIFE", nil];
@@ -51,11 +53,9 @@
         cell = [nib objectAtIndex:0];
     }
     
-    cell.IdeaNameLabel.text = [tableData objectAtIndex:indexPath.row];
-    cell.IdeaSummaryLabel.text = [tableSumData objectAtIndex:indexPath.row];
-    cell.IdeaImageView.image = [UIImage imageNamed:@"lightbulb.jpg"];
-    //cell.NumOfXsLabel.text = [prepTime objectAtIndex:indexPath.row];
-    //cell.NumOfHeartsLabel.text
+    //cell.IdeaSummaryLabel.text = [tableSumData objectAtIndex:indexPath.row];
+    cell.IdeaImageView.image = [UIImage imageNamed:@"HappyFace.png"];
+    cell.NumOfHeartsLabel.text = @"+ 10";
     
     return cell;
 }

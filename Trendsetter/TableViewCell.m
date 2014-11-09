@@ -10,10 +10,8 @@
 
 @implementation TableViewCell
 
-@synthesize IdeaNameLabel = _IdeaNameLabel;
 @synthesize IdeaSummaryLabel = _IdeaSummaryLabel;
 @synthesize NumOfHeartsLabel = _NumOfHeartsLabel;
-@synthesize NumOfXsLabel = _NumOfXsLabel;
 @synthesize IdeaImageView = _IdeaImageView;
 
 - (void)awakeFromNib {
