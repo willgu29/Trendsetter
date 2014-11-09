@@ -19,30 +19,38 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="PCU-ox-pHH">
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="PCU-ox-pHH">
                     <rect key="frame" x="141" y="438" width="39" height="37"/>
                     <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </pageControl>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Holder Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCO-M5-FwK">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holder Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCO-M5-FwK">
                     <rect key="frame" x="30" y="409" width="261" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sd0-tp-wIn">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sd0-tp-wIn">
                     <rect key="frame" x="80" y="47" width="160" height="336"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="ewu-uL-35K">
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="ewu-uL-35K">
                             <rect key="frame" x="-2" y="-1" width="162" height="337"/>
                         </imageView>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="COZ-Yb-QHV">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COZ-Yb-QHV">
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="COZ-Yb-QHV" firstAttribute="top" secondItem="Sd0-tp-wIn" secondAttribute="top" id="LaH-0J-0t4"/>
+                        <constraint firstAttribute="trailing" secondItem="COZ-Yb-QHV" secondAttribute="trailing" constant="160" id="Lcy-jB-Emv"/>
+                        <constraint firstAttribute="bottom" secondItem="ewu-uL-35K" secondAttribute="bottom" id="PCV-ze-lga"/>
+                        <constraint firstAttribute="trailing" secondItem="ewu-uL-35K" secondAttribute="trailing" id="bBz-mb-UFF"/>
+                        <constraint firstItem="COZ-Yb-QHV" firstAttribute="leading" secondItem="Sd0-tp-wIn" secondAttribute="leading" id="bsy-N7-tZI"/>
+                        <constraint firstAttribute="bottom" secondItem="COZ-Yb-QHV" secondAttribute="bottom" constant="336" id="l5G-Iz-fcI"/>
+                    </constraints>
                 </view>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ao4-6Q-RBj">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ao4-6Q-RBj">
                     <rect key="frame" x="30" y="523" width="261" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -50,7 +58,7 @@
                         <outlet property="delegate" destination="-1" id="Un9-go-MrT"/>
                     </connections>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mo3-fe-InH">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mo3-fe-InH">
                     <rect key="frame" x="52" y="485" width="217" height="30"/>
                     <state key="normal" title="Login">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,6 +70,22 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="Sd0-tp-wIn" firstAttribute="centerX" secondItem="uCO-M5-FwK" secondAttribute="centerX" id="2Zs-Jd-cuu"/>
+                <constraint firstItem="Sd0-tp-wIn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="80" id="B1a-US-XPn"/>
+                <constraint firstItem="ao4-6Q-RBj" firstAttribute="top" secondItem="Mo3-fe-InH" secondAttribute="bottom" constant="8" symbolic="YES" id="C12-RO-KsJ"/>
+                <constraint firstItem="uCO-M5-FwK" firstAttribute="top" secondItem="Sd0-tp-wIn" secondAttribute="bottom" constant="26" id="GAX-6O-AbM"/>
+                <constraint firstItem="PCU-ox-pHH" firstAttribute="top" secondItem="uCO-M5-FwK" secondAttribute="bottom" constant="8" symbolic="YES" id="PNX-9m-lWn"/>
+                <constraint firstItem="Mo3-fe-InH" firstAttribute="top" secondItem="PCU-ox-pHH" secondAttribute="bottom" constant="10" id="Te3-37-sqc"/>
+                <constraint firstAttribute="bottom" secondItem="ao4-6Q-RBj" secondAttribute="bottom" constant="15" id="WFh-tS-m7a"/>
+                <constraint firstItem="ao4-6Q-RBj" firstAttribute="trailing" secondItem="uCO-M5-FwK" secondAttribute="trailing" id="aek-HH-XQr"/>
+                <constraint firstItem="Mo3-fe-InH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="52" id="fon-4H-4g5"/>
+                <constraint firstItem="Sd0-tp-wIn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="47" id="frY-Pi-ll6"/>
+                <constraint firstItem="Mo3-fe-InH" firstAttribute="centerX" secondItem="ao4-6Q-RBj" secondAttribute="centerX" id="hCE-bj-soc"/>
+                <constraint firstItem="uCO-M5-FwK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="uSo-4k-POV"/>
+                <constraint firstItem="PCU-ox-pHH" firstAttribute="centerX" secondItem="uCO-M5-FwK" secondAttribute="centerX" id="xeo-8r-YqC"/>
+                <constraint firstItem="uCO-M5-FwK" firstAttribute="leading" secondItem="ao4-6Q-RBj" secondAttribute="leading" id="yLz-17-fcx"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
                 <outletCollection property="gestureRecognizers" destination="qA3-Ir-OEf" appends="YES" id="6Vx-v5-hg3"/>

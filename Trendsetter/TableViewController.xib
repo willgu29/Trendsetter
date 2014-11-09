@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableViewController">
@@ -16,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ayS-EQ-Hqt">
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ayS-EQ-Hqt">
                     <rect key="frame" x="18" y="70" width="284" height="29"/>
                     <segments>
                         <segment title="Top"/>
@@ -27,11 +28,14 @@
                         <action selector="segmentChanged:" destination="-1" eventType="valueChanged" id="iYX-wG-bWF"/>
                     </connections>
                 </segmentedControl>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="GreyOverlay108" translatesAutoresizingMaskIntoConstraints="NO" id="RiP-v1-3mf">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="GreyOverlay108" translatesAutoresizingMaskIntoConstraints="NO" id="RiP-v1-3mf">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsL-Vx-hic">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsL-Vx-hic">
                     <rect key="frame" x="267" y="19" width="53" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="53" id="h6d-c2-yth"/>
+                    </constraints>
                     <color key="tintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" image="plus">
                         <color key="titleColor" red="0.82715654373168945" green="0.2008247971534729" blue="0.71039670705795288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -41,8 +45,11 @@
                         <action selector="postButton:" destination="-1" eventType="touchUpInside" id="F0z-N0-mPu"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqG-Oh-qlF">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqG-Oh-qlF">
                     <rect key="frame" x="8" y="17" width="50" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="mIc-am-QSc"/>
+                    </constraints>
                     <color key="tintColor" red="0.23647943139076233" green="0.73718690872192383" blue="0.60948425531387329" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" image="row reorder">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,10 +58,10 @@
                         <action selector="settingsButton:" destination="-1" eventType="touchUpInside" id="2GW-hs-pIc"/>
                     </connections>
                 </button>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="xbn-dG-Te6">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="xbn-dG-Te6">
                     <rect key="frame" x="75" y="22" width="178" height="27"/>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vko-5R-zk3">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vko-5R-zk3">
                     <rect key="frame" x="0.0" y="106" width="320" height="420"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -64,6 +71,24 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xqG-Oh-qlF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="17" id="5Ed-k8-C0F"/>
+                <constraint firstItem="NsL-Vx-hic" firstAttribute="trailing" secondItem="vko-5R-zk3" secondAttribute="trailing" id="6vh-IT-IUq"/>
+                <constraint firstItem="RiP-v1-3mf" firstAttribute="centerX" secondItem="ayS-EQ-Hqt" secondAttribute="centerX" id="9Wp-p0-OYH"/>
+                <constraint firstItem="RiP-v1-3mf" firstAttribute="trailing" secondItem="NsL-Vx-hic" secondAttribute="trailing" id="ALT-zd-agp"/>
+                <constraint firstItem="ayS-EQ-Hqt" firstAttribute="top" secondItem="xqG-Oh-qlF" secondAttribute="bottom" constant="19" id="G8B-nX-xkW"/>
+                <constraint firstItem="RiP-v1-3mf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PkM-cU-BOS"/>
+                <constraint firstItem="ayS-EQ-Hqt" firstAttribute="top" secondItem="xbn-dG-Te6" secondAttribute="bottom" constant="21" id="WXh-RH-Vjl"/>
+                <constraint firstAttribute="bottom" secondItem="vko-5R-zk3" secondAttribute="bottom" constant="42" id="Wpv-kh-KoZ"/>
+                <constraint firstItem="ayS-EQ-Hqt" firstAttribute="top" secondItem="NsL-Vx-hic" secondAttribute="bottom" constant="22" id="aoE-vn-iVt"/>
+                <constraint firstItem="RiP-v1-3mf" firstAttribute="leading" secondItem="vko-5R-zk3" secondAttribute="leading" id="eDf-yv-6Yg"/>
+                <constraint firstItem="ayS-EQ-Hqt" firstAttribute="top" secondItem="RiP-v1-3mf" secondAttribute="bottom" constant="15" id="f9E-Am-YLO"/>
+                <constraint firstItem="vko-5R-zk3" firstAttribute="top" secondItem="ayS-EQ-Hqt" secondAttribute="bottom" constant="8" symbolic="YES" id="jK1-ic-mfa"/>
+                <constraint firstItem="NsL-Vx-hic" firstAttribute="leading" secondItem="xbn-dG-Te6" secondAttribute="trailing" constant="14" id="kSp-sZ-bE3"/>
+                <constraint firstItem="NsL-Vx-hic" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="19" id="mBZ-xK-TlT"/>
+                <constraint firstItem="RiP-v1-3mf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="reL-qh-JvD"/>
+                <constraint firstItem="xqG-Oh-qlF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="uEk-Av-Vbb"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="409" y="371"/>
         </view>

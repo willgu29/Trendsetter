@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -10,34 +11,56 @@
             <rect key="frame" x="0.0" y="0.0" width="281" height="335"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card #" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F81-rN-i2R">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card #" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F81-rN-i2R">
                     <rect key="frame" x="206" y="8" width="67" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Ym2-C5-xkZ"/>
+                        <constraint firstAttribute="width" constant="67" id="lgD-9W-abt"/>
+                    </constraints>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="whiteboard" translatesAutoresizingMaskIntoConstraints="NO" id="L2z-AP-5ck">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="whiteboard" translatesAutoresizingMaskIntoConstraints="NO" id="L2z-AP-5ck">
                     <rect key="frame" x="0.0" y="-2" width="282" height="259"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udv-tF-fIb">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udv-tF-fIb">
                     <rect key="frame" x="13" y="14" width="254" height="203"/>
                     <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="28"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Layer_8" translatesAutoresizingMaskIntoConstraints="NO" id="QFm-FA-TlP">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Layer_8" translatesAutoresizingMaskIntoConstraints="NO" id="QFm-FA-TlP">
                     <rect key="frame" x="0.0" y="255" width="282" height="80"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJz-Aa-mgh">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJz-Aa-mgh">
                     <rect key="frame" x="72" y="285" width="138" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Person40x40" translatesAutoresizingMaskIntoConstraints="NO" id="8WF-00-nfo">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Person40x40" translatesAutoresizingMaskIntoConstraints="NO" id="8WF-00-nfo">
                     <rect key="frame" x="42" y="284" width="20" height="20"/>
                 </imageView>
             </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="QFm-FA-TlP" secondAttribute="bottom" id="7SQ-ZR-5tB"/>
+                <constraint firstItem="QFm-FA-TlP" firstAttribute="top" secondItem="Udv-tF-fIb" secondAttribute="bottom" constant="38" id="7eI-6s-BpL"/>
+                <constraint firstItem="Udv-tF-fIb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="I4z-sU-Evj"/>
+                <constraint firstItem="F81-rN-i2R" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="KG3-k9-sYt"/>
+                <constraint firstAttribute="trailing" secondItem="TJz-Aa-mgh" secondAttribute="trailing" constant="71" id="SqW-hX-1RS"/>
+                <constraint firstItem="F81-rN-i2R" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="URY-BW-Mdn"/>
+                <constraint firstItem="QFm-FA-TlP" firstAttribute="centerX" secondItem="TJz-Aa-mgh" secondAttribute="centerX" id="bOb-vr-SS0"/>
+                <constraint firstItem="QFm-FA-TlP" firstAttribute="centerY" secondItem="TJz-Aa-mgh" secondAttribute="centerY" id="bVf-bE-ulS"/>
+                <constraint firstItem="TJz-Aa-mgh" firstAttribute="top" secondItem="L2z-AP-5ck" secondAttribute="bottom" constant="28" id="fDV-1j-4qD"/>
+                <constraint firstItem="Udv-tF-fIb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fje-Yg-pRI"/>
+                <constraint firstItem="TJz-Aa-mgh" firstAttribute="leading" secondItem="8WF-00-nfo" secondAttribute="trailing" constant="10" id="hFK-CO-D2F"/>
+                <constraint firstItem="Udv-tF-fIb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="hSU-t8-Oig"/>
+                <constraint firstAttribute="trailing" secondItem="L2z-AP-5ck" secondAttribute="trailing" constant="-1" id="ilk-Gm-kFE"/>
+                <constraint firstItem="L2z-AP-5ck" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-2" id="pkG-SF-doe"/>
+                <constraint firstItem="QFm-FA-TlP" firstAttribute="trailing" secondItem="L2z-AP-5ck" secondAttribute="trailing" id="taE-fn-Ic0"/>
+                <constraint firstItem="8WF-00-nfo" firstAttribute="top" secondItem="L2z-AP-5ck" secondAttribute="bottom" constant="27" id="ycS-h8-HsL"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
