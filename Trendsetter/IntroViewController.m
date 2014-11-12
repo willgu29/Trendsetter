@@ -172,13 +172,13 @@
     }
     else if (pageNumber == 2)
     {
-        image = [UIImage imageNamed:@"postIdeas.png"];
+        image = [UIImage imageNamed:@"Screenshot3.png"];
         self.text.text = @"Write ideas";
     }
     else if (pageNumber == 3)
     {
 //        image = [UIImage imageNamed:@"Heart40x40.png"];
-        image = [UIImage imageNamed:@"successPost.png"];
+        image = [UIImage imageNamed:@"Screenshot4.png"];
         self.text.text = @"Trendsetter Beta";
     }
     else
