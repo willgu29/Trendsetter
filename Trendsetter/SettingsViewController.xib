@@ -24,38 +24,8 @@
                         <action selector="backButton:" destination="-1" eventType="touchUpInside" id="CrK-TW-MLS"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made By:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4u2-wE-A7R">
-                    <rect key="frame" x="123" y="117" width="74" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vivek Vinodh from UC Riverside" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohx-Me-oJw">
-                    <rect key="frame" x="26" y="196" width="244" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="James Mishra from U of Minnesota" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRg-jI-wpi">
-                    <rect key="frame" x="26" y="273" width="269" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sandra Soueid from UC San Diego" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1r-2r-dpZ">
-                    <rect key="frame" x="26" y="234" width="267" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will Gu from UCLA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYA-pH-QZx">
-                    <rect key="frame" x="26" y="312" width="145" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLJ-8b-Eq6">
-                    <rect key="frame" x="112" y="403" width="96" height="30"/>
+                    <rect key="frame" x="112" y="269" width="96" height="30"/>
                     <state key="normal" title="Found a bug?">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -66,20 +36,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="3cx-fB-Ta4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="05X-QY-pg6"/>
-                <constraint firstItem="Z1r-2r-dpZ" firstAttribute="top" secondItem="Ohx-Me-oJw" secondAttribute="bottom" constant="17" id="0vr-83-czy"/>
-                <constraint firstItem="ZRg-jI-wpi" firstAttribute="centerX" secondItem="4u2-wE-A7R" secondAttribute="centerX" id="4Fm-WM-qNC"/>
-                <constraint firstItem="ZRg-jI-wpi" firstAttribute="leading" secondItem="Z1r-2r-dpZ" secondAttribute="leading" id="5pP-7g-Ua9"/>
-                <constraint firstItem="DLJ-8b-Eq6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Q4-jz-9Tx"/>
-                <constraint firstItem="Ohx-Me-oJw" firstAttribute="top" secondItem="4u2-wE-A7R" secondAttribute="bottom" constant="58" id="Hif-HA-XxV"/>
-                <constraint firstItem="DLJ-8b-Eq6" firstAttribute="top" secondItem="JYA-pH-QZx" secondAttribute="bottom" constant="70" id="M7q-I6-4OF"/>
-                <constraint firstItem="ZRg-jI-wpi" firstAttribute="top" secondItem="Z1r-2r-dpZ" secondAttribute="bottom" constant="18" id="QQG-Fd-dRD"/>
-                <constraint firstItem="JYA-pH-QZx" firstAttribute="top" secondItem="ZRg-jI-wpi" secondAttribute="bottom" constant="18" id="WC4-AS-95H"/>
-                <constraint firstItem="ZRg-jI-wpi" firstAttribute="centerX" secondItem="DLJ-8b-Eq6" secondAttribute="centerX" id="cJ5-gi-QAX"/>
-                <constraint firstItem="4u2-wE-A7R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="117" id="sU7-KS-4b6"/>
-                <constraint firstItem="Z1r-2r-dpZ" firstAttribute="leading" secondItem="Ohx-Me-oJw" secondAttribute="leading" id="w0o-dM-dnv"/>
-                <constraint firstItem="3cx-fB-Ta4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="wXe-AE-N8M"/>
-                <constraint firstItem="ZRg-jI-wpi" firstAttribute="leading" secondItem="JYA-pH-QZx" secondAttribute="leading" id="ye2-Wo-gIf"/>
+                <constraint firstItem="DLJ-8b-Eq6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1Cx-4K-y4i"/>
+                <constraint firstItem="3cx-fB-Ta4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="enE-fM-SOT"/>
+                <constraint firstItem="DLJ-8b-Eq6" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ju4-Kz-hwt"/>
+                <constraint firstItem="3cx-fB-Ta4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="mhD-Ml-Sup"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
