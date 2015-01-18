@@ -10,7 +10,6 @@
 		84D2B5D91A0E13F800F29DC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B5D81A0E13F800F29DC3 /* main.m */; };
 		84D2B5DC1A0E13F800F29DC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B5DB1A0E13F800F29DC3 /* AppDelegate.m */; };
 		84D2B5E41A0E13F800F29DC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B5E31A0E13F800F29DC3 /* Images.xcassets */; };
-		84D2B5E71A0E13F800F29DC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B5E51A0E13F800F29DC3 /* LaunchScreen.xib */; };
 		84D2B5F31A0E13F800F29DC3 /* TrendsetterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B5F21A0E13F800F29DC3 /* TrendsetterTests.m */; };
 		84D2B5FF1A0E142B00F29DC3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D2B5FD1A0E142B00F29DC3 /* LoginViewController.m */; };
 		84D2B6001A0E142B00F29DC3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D2B5FE1A0E142B00F29DC3 /* LoginViewController.xib */; };
@@ -90,7 +89,6 @@
 		84D2B5DA1A0E13F800F29DC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84D2B5DB1A0E13F800F29DC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		84D2B5E31A0E13F800F29DC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		84D2B5E61A0E13F800F29DC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		84D2B5EC1A0E13F800F29DC3 /* TrendsetterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendsetterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D2B5F11A0E13F800F29DC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84D2B5F21A0E13F800F29DC3 /* TrendsetterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrendsetterTests.m; sourceTree = "<group>"; };
@@ -280,7 +278,6 @@
 				84D2B5DA1A0E13F800F29DC3 /* AppDelegate.h */,
 				84D2B5DB1A0E13F800F29DC3 /* AppDelegate.m */,
 				84D2B5E31A0E13F800F29DC3 /* Images.xcassets */,
-				84D2B5E51A0E13F800F29DC3 /* LaunchScreen.xib */,
 				84D2B5D61A0E13F800F29DC3 /* Supporting Files */,
 				84D2B5FC1A0E142B00F29DC3 /* LoginViewController.h */,
 				84D2B5FD1A0E142B00F29DC3 /* LoginViewController.m */,
@@ -584,7 +581,6 @@
 				84D2B6341A0E1EB000F29DC3 /* TabBarViewController.xib in Resources */,
 				84D2B67A1A0E601600F29DC3 /* MyIdeasViewController.xib in Resources */,
 				84D2B66F1A0E544900F29DC3 /* lightbulb.jpg in Resources */,
-				84D2B5E71A0E13F800F29DC3 /* LaunchScreen.xib in Resources */,
 				84D2B68B1A0E678600F29DC3 /* SettingsViewController.xib in Resources */,
 				84D2B5E41A0E13F800F29DC3 /* Images.xcassets in Resources */,
 				84D2B63A1A0E1EE600F29DC3 /* TableViewController.xib in Resources */,
@@ -667,17 +663,6 @@
 			targetProxy = 84D2B5ED1A0E13F800F29DC3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		84D2B5E51A0E13F800F29DC3 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84D2B5E61A0E13F800F29DC3 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		84D2B5F41A0E13F800F29DC3 /* Debug */ = {
